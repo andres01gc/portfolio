@@ -56,14 +56,19 @@ html, body {
     position: absolute;
     top: 0;
     left: 0;
-    visibility: hidden;
-    overflow: hidden;
-    backface-visibility: hidden;
-    transform: translate3d(0, 0, 0);
+    display: none;
+
+
+    /*visibility: hidden;*/
+    /*overflow: hidden;*/
+    /*backface-visibility: hidden;*/
+    /*transform: translate3d(0, 0, 0);*/
+
 
 }
 
 .page.is-current {
+    display: inline;
     visibility: visible;
     overflow: hidden;
     backface-visibility: hidden;

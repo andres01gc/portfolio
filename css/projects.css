@@ -1,15 +1,23 @@
 .p-projects {
     background: linear-gradient(#161C2C, #291F2F);
     opacity: 1;
-/ / background-color: palegoldenrod;;
-/ / background-blend-mode: multiply;
+    /*background-color: palegoldenrod;;*/
+    /*background-blend-mode: multiply;*/
+
     width: 100%;
     height: 100%;
     position: absolute;
 }
 
-.project-page {
-    visibility: hidden;
+.pro-page {
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.cur {
+    display: inline;
 }
 
 .project-container {
@@ -37,6 +45,7 @@
 }
 
 .upside {
+    position: relative;
     margin: auto;
     width: 50%;
     height: 49%;
@@ -48,23 +57,16 @@
 }
 
 .project-tittle {
-    width: auto;
-    height: auto;
-    height: .8em;
-    /*background: #291F2F;*/
-    /*bottom: 0;*/
+    /*width: auto;*/
+    /*height: auto;*/
+    /*height: .8em;*/
+    /*!*background: #291F2F;*!*/
+    /*!*bottom: 0;*!*/
     font-family: "Catamaran SemiBold";
-    font-size: 5em;
+    font-size: 2em;
     /*bottom: 0;*/
-    text-align: end;
-}
 
-.project-page {
-
-    /*opacity: .2;*/
-    width: 100%;
-    height: 100%;
-    /*opacity: .2;*/
+    /*!*text-align: end;*!*/
 }
 
 .linedown {
@@ -81,7 +83,7 @@
 }
 
 .full-img {
-    z-index: -5;
+    /*z-index: -5;*/
     position: absolute;
     background-image: url("http://media.idownloadblog.com/wp-content/uploads/2016/02/Firewatch-Wallpaper-desktop-2560x1440-yellow.jpg");
     background-size: cover;
@@ -98,7 +100,9 @@
 }
 
 .downside {
-    z-index: 10000;
+    position: relative;
+    /*display: inline;*/
+    /*z-index: 10000;*/
     margin: auto;
     /*display:table-row;*/
     width: 50%;
@@ -127,7 +131,7 @@
 }
 
 .project-image {
-    z-index: -1;
+    /*z-index: 0;*/
     position: absolute;
     margin: auto;
     top: 0;
@@ -142,7 +146,7 @@
     background-blend-mode: color-dodge;
     -webkit-clip-path: polygon(40% 0, 100% 0, 100% 60%, 70% 100%, 0 100%, 0 48%);
     clip-path: polygon(40% 0, 100% 0, 100% 60%, 70% 100%, 0 100%, 0 48%);
-    opacity: .7;
+    /*opacity: .7;*/
 
 }
 
@@ -158,8 +162,7 @@
 }
 
 .project-next {
-    z-index: 0;
-
+    /*z-index: 0;*/
     color: #F91010;
 }
 

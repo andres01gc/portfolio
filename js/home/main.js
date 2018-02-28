@@ -43,11 +43,13 @@ function showHome(e) {
 }
 
 function showProjects(e) {
-    currentElement = document.querySelector('#nav-buttons').style.visibility = "visible";
-//visualizar un primer proyecto
-//     currentElement = document.querySelector('.project-page').style.visibility = "visible";
+    document.querySelector('#nav-buttons').style.visibility = "visible";
+//visualizar un primer proyect
+
     scaleDown(e);//saca de la escena el actual
     scaleUp(document.querySelector('.p-projects'));//entra !
+
+
 }
 
 function showAbout(e) {

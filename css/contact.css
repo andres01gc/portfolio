@@ -1,0 +1,72 @@
+.p-contact {
+  background: linear-gradient(#161C2C, #291F2F);
+  opacity: 1;
+  background-blend-mode: multiply;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+.contact-container {
+  margin: 0 auto;
+  width: 25%;
+  position: relative;
+  top: 40%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.msg {
+  text-align: center;
+  width: auto;
+  margin-bottom: 1em;
+}
+
+.mail {
+  font-family: "Catamaran SemiBold";
+  border: 2px solid white;
+  width: 30%;
+  text-align: center;
+  margin: 2em auto;
+  padding: .4em;
+}
+
+.mail:hover {
+  background: white;
+  color: rebeccapurple;
+  cursor: pointer;
+  text-align: center;
+}
+
+.contact-tittle {
+  margin-bottom: .5em;
+}
+
+.p-contact {
+  background-color: peru;
+}
+
+.accounts {
+  //position: relative;
+  //padding: 1em;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.accounts a {
+  //position: relative;
+  padding: .5em;
+  opacity: .2;
+}
+
+
+.accounts a:hover{
+  //position: relative;
+  //padding: .5em;
+  opacity: 1;
+  cursor: pointer;
+}

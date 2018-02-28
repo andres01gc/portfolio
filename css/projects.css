@@ -1,0 +1,193 @@
+.p-projects {
+    background: linear-gradient(#161C2C, #291F2F);
+    opacity: 1;
+/ / background-color: palegoldenrod;;
+/ / background-blend-mode: multiply;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+.project-page {
+    visibility: hidden;
+}
+
+.project-container {
+    /*//background-color: blue;*/
+    /*margin: 0 auto;*/
+    /*float: left;*/
+    /*margin-left: 25em;*/
+    /*position: absolute;*/
+    /*top: 60%;*/
+    /*transform: translateY(-50%);*/
+    /*text-align: left;*/
+
+    position: absolute;
+    margin: auto;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 15rem;
+
+    height: 100%;
+    width: 40%;
+    /*background: white;*/
+    /*opacity: 0.2;*/
+
+}
+
+.upside {
+    margin: auto;
+    width: 50%;
+    height: 49%;
+    /*background: crimson;*/
+    /*display:block;*/
+    display: flex;
+    /*bottom: 0px;*/
+    align-items: end;
+}
+
+.project-tittle {
+    width: auto;
+    height: auto;
+    height: .8em;
+    /*background: #291F2F;*/
+    /*bottom: 0;*/
+    font-family: "Catamaran SemiBold";
+    font-size: 5em;
+    /*bottom: 0;*/
+    text-align: end;
+}
+
+.project-page {
+
+    /*opacity: .2;*/
+    width: 100%;
+    height: 100%;
+    /*opacity: .2;*/
+}
+
+.linedown {
+    height: 100%;
+    width: 2px;
+    background: #F91010;
+    float: right;
+}
+
+.lineup {
+    height: 100%;
+    width: 2px;
+    background: #F91010;
+}
+
+.full-img {
+    z-index: -5;
+    position: absolute;
+    background-image: url("http://media.idownloadblog.com/wp-content/uploads/2016/02/Firewatch-Wallpaper-desktop-2560x1440-yellow.jpg");
+    background-size: cover;
+    background-position: center center;
+    width: 120%;
+    height: 120%;
+
+    opacity: .2;
+    -webkit-filter: blur(50px);
+    -moz-filter: blur(50px);
+    -o-filter: blur(50px);
+    -ms-filter: blur(50px);
+    filter: blur(50px);
+}
+
+.downside {
+    z-index: 10000;
+    margin: auto;
+    /*display:table-row;*/
+    width: 50%;
+    height: auto;
+    /*display: flex;*/
+    /*background: gold;*/
+}
+
+.project-content {
+    text-align: left;
+    width: 100%;
+    margin-top: 1em;
+    font-size: 1em;
+    float: left;
+}
+
+.watch-case {
+    margin: 1em;
+    font-family: "Catamaran SemiBold";
+    opacity: .2;
+}
+
+.watch-case:hover {
+    opacity: 1;
+    cursor: pointer;
+}
+
+.project-image {
+    z-index: -1;
+    position: absolute;
+    margin: auto;
+    top: 0;
+    right: 10rem;
+    bottom: 0;
+    left: 0;
+    height: 55%;
+    width: 50%;
+    background-image: url("http://media.idownloadblog.com/wp-content/uploads/2016/02/Firewatch-Wallpaper-desktop-2560x1440-yellow.jpg");
+    background-size: cover;
+    background-position: center center;
+    background-blend-mode: color-dodge;
+    -webkit-clip-path: polygon(40% 0, 100% 0, 100% 60%, 70% 100%, 0 100%, 0 48%);
+    clip-path: polygon(40% 0, 100% 0, 100% 60%, 70% 100%, 0 100%, 0 48%);
+    opacity: .7;
+
+}
+
+.project-line {
+    z-index: -1;
+    position: relative;
+    /*right: 0;*/
+    top: 44%;
+    width: 35%;
+
+    height: 2px;
+    background-color: #F91010;
+}
+
+.project-next {
+    z-index: 0;
+
+    color: #F91010;
+}
+
+.project-next:hover {
+    cursor: pointer;
+}
+
+.project-image-mask {
+    position: absolute;
+    margin: auto;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 10rem;
+
+    height: 100%;
+    width: 60%;
+    background: linear-gradient(#161C2C, #291F2F);
+    /*background-image: url("../images/noisetxtr.png");*/
+    /*background-size: cover;*/
+    background-repeat: repeat;
+    background-blend-mode: color-dodge;
+    opacity: .5;
+    -webkit-clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+    clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+
+}
+
+
+
+

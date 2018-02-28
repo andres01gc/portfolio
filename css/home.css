@@ -1,0 +1,190 @@
+.home-img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    /*opacity: .3;*/
+    background-image: url("https://static.pexels.com/photos/473107/pexels-photo-473107.jpeg");
+    background-size: 2000px;
+    background-position: 0px 0px;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    top: 0px;
+    background-position-y: -45vh;
+    /*clip-path: url(#mask);*/
+    clip-position: 25% 75%;
+    /*mask-clip: no-clipZ;*/
+}
+
+.split-part {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+
+}
+
+.home-downside .home-img {
+    background-position-y: -90vh;
+    /*background-position-x: -3vh;*/
+    opacity: .5;
+}
+
+.home-upside {
+    position: relative;
+    width: 100%;
+    height: 50%;
+    overflow: hidden;
+    opacity: .6;
+
+}
+
+.up {
+    clip-path: polygon(20% 0%, 100% 0%, 90% 100%, 10% 100%);
+    /*opacity: .2;*/
+    /*transform: translateX(1%);*/
+    /*-webkit-clip-path: url(#mask);*/
+}
+
+#mask {
+
+    opacity: .2;
+}
+
+.down {
+
+    clip-path: polygon(10% 0, 90% 0%, 80% 100%, 0% 100%);
+
+    /*transform: translateX(-1%);*/
+    /*background-position: top;*/
+}
+
+.home-myname {
+/*/ / display: inline-block;*/
+    position: absolute;
+    width: auto;
+    height: auto;
+    margin: 0 auto;
+    color: white;
+    /*background-color: white;*/
+    opacity: .1;
+    /*margin-top: 18%;*/
+    text-align: center;
+    font-size: 10vw;
+    bottom: 0;
+    left: 0px;
+    right: 0;
+    background-blend-mode: multiply;
+    font-family: "Catamaran ExtraBold";
+    margin-bottom: -9%;
+    /*right: 0;*/
+
+}
+
+.home-myname-down {
+    position: absolute;
+    width: auto;
+    height: auto;
+    margin: 0 auto;
+    color: white;
+    /*background-color: white;*/
+    opacity: .1;
+    /*margin-top: 18%;*/
+    text-align: center;
+    font-size: 10vw;
+    /*bottom: 0;*/
+    left: 0;
+    right: 0;
+    font-family: "Catamaran ExtraBold";
+    /*right: 0;*/
+    margin-top: -8%;
+    /**/
+
+}
+
+.home-downside {
+    position: relative;
+
+    width: 100%;
+    height: 49%;
+    overflow: hidden;
+    /*-webkit-clip-path: polygon(10% 0, 100% 0%, 90% 100%, 0% 100%);*/
+
+}
+
+.home-split-line {
+
+    width: 100%;
+    height: 2px;
+
+    background: white;
+    opacity: .1;
+}
+
+.home-container {
+    margin: 0 auto;
+    float: right;
+    width: 50%;
+    /*right: 0;*/
+    /*centra verticalmente*/
+    position: relative;
+
+    top: 70%;
+    transform: translateY(-50%);
+    z-index: 5;
+}
+
+/*!*#canvas-home {*!*/
+/*!*width: 100%;*!*/
+/*!*height: 100%;*!*/
+/*!*background-color: black;*!*/
+/*!*position: absolute;*!*/
+/*!*}*!*/
+
+.home-msg-1 {
+    font-size: 3.2vw;
+    /*width: 100%;*/
+    margin-bottom: -1.5rem;
+    font-family: "Catamaran Thin";
+    opacity: .9;
+    /*padding-bottom: .2em;*/
+}
+
+.home-line {
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    margin-top: -2vh;
+    background-color: #F91010;
+    /*2px;*/
+}
+
+.home-rect {
+    position: absolute;
+    width: 90%;
+    height: 30%;
+    margin-left: 2rem;
+    margin-top: 5%;
+    background-blend-mode: multiply;
+    background-image: url("../images/noisetxtr.png");
+    /*background-color: black;*/
+    background-repeat: repeat;
+    z-index: -200;
+    opacity: .3;
+    /*clip-path: polygon(0 0, 100% 0%, 85% 100%, 0% 100%);*/
+}
+
+.homemenu {
+    display: flex;
+    /*/ / justify-content: center;*/
+}
+
+.homemenu button {
+    margin: 1em;
+    font-family: "Catamaran Thin";
+    font-size: 1em;
+}
+
+.homemenu button:hover {
+    color: #F91010;
+    cursor: pointer;
+}
+

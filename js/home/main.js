@@ -19,12 +19,12 @@ function changeRoute(nRoute) {
             break;
         case 'goAbout':
             showAbout(currentElement);
+
             break;
         case 'goProjects':
             showProjects(currentElement);
             break;
         case 'goContact':
-            //ocultar ese primer proyecto! SOLUCION TEMPORAL TODO
             showContact(currentElement);
             break;
     }
@@ -48,7 +48,6 @@ function showProjects(e) {
 
     scaleDown(e);//saca de la escena el actual
     scaleUp(document.querySelector('.p-projects'));//entra !
-
 
 }
 
@@ -103,11 +102,18 @@ function outHome(el) {
 
 
     // var logo = $('.logo');
-    var imgup = $('.up');
+    var imgup = $('.home-upside');
     var nameup = $('.home-myname');
     var splitline = $('.home-split-line');
-    var imgdown = $('.down');
+    var imgdown = $('.home-downside');
     var namedown = $('.home-myname-down');
+
+    var hrect = $('.home-rect');
+    var hmsg = $('.home-msg');
+
+    var hline = $('.home-line');
+    var hmenu = $('.homemenu');
+
     // var name = $('.home-myname-down');
     // var current = $('.current');
 
@@ -132,58 +138,66 @@ function outHome(el) {
 
     });
 
-
-    outh.fromTo(imgup, .8, {
+    outh.addLabel("pack");
+    outh.fromTo(imgup, 1, {
         opacity: 1,
         scale: 1
     }, {
         opacity: 0,
-        width: 0,
-        clearProps: 'opacity, scale'
+        y: -500,
+        clearProps: 'opacity, scale, y'
     }, "pack");
 
-    outh.fromTo(imgdown, .8, {
+    outh.fromTo(imgdown, 1, {
         opacity: 1,
         scale: 1
     }, {
         opacity: 0,
-        width: 0,
-        x: 400,
-        clearProps: 'opacity, scale'
+        y: 500,
+
+        clearProps: 'opacity, scale,y'
     }, "pack");
 
 
-    outh.fromTo(nameup, 1, {
-        // opacity: 1,
-        // scale: 1
+    outh.fromTo(hmsg, .5, {
+        opacity: 1,
+        scale: 1
     }, {
         opacity: 0,
+        scale: .5,
         // width: 0,
-        x: -400,
-
+        // x: 400,
         clearProps: 'opacity, scale'
     }, "pack");
-
-    outh.fromTo(namedown, 1, {
-        // opacity: 1,
-        // scale: 1
-    }, {
-        opacity: 0,
-        // width: 0,
-        x: 400,
-        clearProps: 'opacity, scale'
-    }, "pack");
-
-
+    //
+    //
     outh.fromTo(splitline, .3, {
         // opacity: 1,
         // scale: 1
     }, {
         opacity: 0,
-        // width: 0,
-        width: 0,
         clearProps: 'opacity, scale'
     }, "pack");
+
+
+    outh.fromTo(hline, 1, {
+        // opacity: 1,
+        // scale: 1
+    }, {
+        opacity: 0, x: 300,
+        clearProps: 'opacity, scale'
+    }, "pack");
+
+
+    outh.fromTo(hmenu, 2, {
+        // opacity: 1,
+        // scale: 1
+    }, {
+        opacity: 0, y: 300,
+        clearProps: 'opacity, scale'
+    }, "pack");
+
+
 
     outh.play();
 

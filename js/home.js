@@ -1,7 +1,7 @@
 var inicioFin = false;
 $('.main-view').mousemove(function (e) {
 
-    if(inicioFin){
+    if (inicioFin) {
         parallaxIt(e, '.home-myname-down', +20, 5);
         parallaxIt(e, '.home-myname', -20, 6);
 
@@ -19,7 +19,6 @@ $('.main-view').mousemove(function (e) {
 
     parallaxIt(e, '.up', 40, 0);
     parallaxIt(e, '.down', -40, 0);
-
 
 
 });
@@ -44,6 +43,12 @@ var splitline = $('.home-split-line');
 var imgdown = $('.down');
 var namedown = $('.home-myname-down');
 var current = $('.current');
+
+var hrect = $('.home-rect');
+var hmsg = $('.home-msg');
+
+var hline = $('.home-line');
+var hmenu = $('.homemenu');
 
 $(document).ready(function () {
     startPage();
@@ -75,7 +80,7 @@ function startPage() {
 
 
     // initTl.addLabel("imgs");//
-    initTl.fromTo(imgup, 2, {
+    initTl.fromTo(imgup, 1, {
             opacity: .3,
             height: 0
             // scale: .01
@@ -93,7 +98,7 @@ function startPage() {
         "imgs"
     );
 
-    initTl.fromTo(imgdown, 2, {
+    initTl.fromTo(imgdown, 1, {
             opacity: .3,
             // scale: .01
             width: 0
@@ -130,7 +135,7 @@ function startPage() {
     //
     //
     initTl.addLabel("ani");
-    initTl.fromTo(nameup, 1, {
+    initTl.fromTo(nameup, .5, {
         opacity: 0
         // scale: .01
         // rigth: -200,
@@ -139,13 +144,13 @@ function startPage() {
     }, {
         // opacity: .2,
         // rigth: 0,
-        x: 30,
+        // x: 30,
         opacity: .5,
         // // rotation: "-=45",
         clearProps: ' scale'
     }, "ani");
     //
-    initTl.fromTo(namedown, 1, {
+    initTl.fromTo(namedown, .5, {
         opacity: 0
         // scale: .01
 
@@ -153,25 +158,84 @@ function startPage() {
     }, {
         // opacity: .2,
         opacity: .5,
-        x: -15,
+        // x: -15,
         // // rotation: "-=45",
-        clearProps: 'scale,x'
+        clearProps: 'scale'
     }, "ani");
     //
     //
-    // initTl.delay(2);
-    // initTl.fromTo(logo, 2, {
-    //     opacity: 0,
-    //     scale: .1,
-    //     rotation: "+=45"
-    //
-    // }, {
-    //     opacity: 1,
-    //     scale: 1,
-    //     rotation: "-=45",
-    //     clearProps: 'opacity, scale'
-    // });
+    initTl.delay(2);
+    initTl.fromTo(logo, 3, {
+        opacity: 0,
+        scale: .1,
+        rotation: "+=45"
 
+    }, {
+        opacity: 1,
+        scale: 1,
+        rotation: "-=45",
+        clearProps: 'opacity, scale'
+    });
+
+
+//////////////////////
+    initTl.fromTo(hrect, 1, {
+        opacity: 0
+        // scale: .01
+
+        // rotation: "+=45"
+    }, {
+        // opacity: .2,
+        opacity: .5,
+        // // rotation: "-=45",
+        clearProps: 'scale'
+    }, "ani");
+
+    ////////////////////
+    initTl.fromTo(hmsg, 1, {
+        opacity: 0,
+        scale: .8
+
+        // rotation: "+=45"
+    }, {
+        // opacity: .2,
+        scale: 1,
+        opacity: .5,
+        // x: -15,
+        // // rotation: "-=45",
+        clearProps: 'scale'
+    }, "ani");
+
+    ///////////////////
+
+    initTl.fromTo(hline, 1, {
+        opacity: 0,
+        // scale: .01
+         x: 100,
+
+        width: 0
+        // rotation: "+=45"
+    }, {
+        // opacity: .2,
+        opacity: .5,
+        width: '100%',
+        x: 0,
+        // // rotation: "-=45",
+        clearProps: 'scale'
+    }, "ani");
+
+    initTl.fromTo(hmenu, 1, {
+        opacity: 0
+        // scale: .01
+
+        // rotation: "+=45"
+    }, {
+        // opacity: .2,
+        opacity: .8,
+        // x: -15,
+        // // rotation: "-=45",
+        clearProps: 'scale,x'
+    }, "ani");
     initTl.play();
 }
 

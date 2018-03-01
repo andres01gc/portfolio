@@ -122,10 +122,10 @@ ul.list li span {
     left: 0px;
     right: 0;
     /*background-blend-mode: multiply;*/
-    font-family: "Catamaran ExtraBold";
-    margin-bottom: -4.3%;
+    font-family: "Catamaran SemiBold";
+    margin-bottom: -4.5%;
     /*right: 0;*/
-    text-shadow: 5px 5px 5px black;
+    /*text-shadow: 5px 5px 5px black;*/
 }
 
 .home-myname-down {
@@ -142,11 +142,11 @@ ul.list li span {
     /*bottom: 0;*/
     left: 0;
     right: 0;
-    font-family: "Catamaran ExtraBold";
+    font-family: "Catamaran SemiBold";
     /*right: 0;*/
     margin-top: -4%;
     /**/
-    text-shadow: 5px 5px 5px black;
+    /*text-shadow: 5px 5px 5px black;*/
 }
 
 .home-downside {
@@ -187,7 +187,7 @@ ul.list li span {
 /*!*position: absolute;*!*/
 /*!*}*!*/
 
-.home-msg-1 {
+.home-msg {
     font-size: 2.5vw;
     /*width: 100%;*/
     margin-bottom: -1.5rem;

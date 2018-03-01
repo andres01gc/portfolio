@@ -1,4 +1,11 @@
+var inicioFin = false;
 $('.main-view').mousemove(function (e) {
+
+    if(inicioFin){
+        parallaxIt(e, '.home-myname-down', +20, 5);
+        parallaxIt(e, '.home-myname', -20, 6);
+
+    }
     parallaxIt(e, '.homemenu', -30, -60);
     parallaxIt(e, '.home-msg-1', -30, 0);
     // // parallaxIt(e, '.home-msg-2', -10);
@@ -6,13 +13,14 @@ $('.main-view').mousemove(function (e) {
     parallaxIt(e, '.home-rect', -30, 20);
     // // parallaxIt(e,    '.home-img', -20);
     //
-    parallaxIt(e, '.up', 40, 0);
-    parallaxIt(e, '.down', -40, 0);
+
 
     parallaxIt(e, '.bar', -10, 10);
 
-    parallaxIt(e, '.home-myname-down', -40, 5);
-    parallaxIt(e, '.home-myname', 30, 6);
+    parallaxIt(e, '.up', 40, 0);
+    parallaxIt(e, '.down', -40, 0);
+
+
 
 });
 
@@ -53,6 +61,9 @@ function startPage() {
             // isUpdating = true;
         },
         onComplete: function () {
+
+            inicioFin = true;
+
             // isUpdating = false;
             // removeCurrentClass(title);
             // removeCurrentClass(content);
@@ -64,9 +75,9 @@ function startPage() {
 
 
     // initTl.addLabel("imgs");//
-    initTl.fromTo(imgup, 1, {
+    initTl.fromTo(imgup, 2, {
             opacity: .3,
-            width: 0
+            height: 0
             // scale: .01
             // rotation: "+=45"
             // left: 500
@@ -74,16 +85,15 @@ function startPage() {
         {
             left: 0,
             opacity: .6,
-            width: "100%",
+            height: "100%",
 
             clearProps: 'scale'
         }
         ,
         "imgs"
-    )
-    ;
+    );
 
-    initTl.fromTo(imgdown, 1, {
+    initTl.fromTo(imgdown, 2, {
             opacity: .3,
             // scale: .01
             width: 0
@@ -102,12 +112,12 @@ function startPage() {
             clearProps: ' scale'
         },
         "imgs"
-    )
-    ;
+    );
 
-
-    initTl.delay(2);
-
+    //
+    //
+    // initTl.delay(2);
+    //
     initTl.fromTo(splitline, .5, {
         opacity: 0,
         scale: .01// rotation: "+=45"
@@ -117,8 +127,8 @@ function startPage() {
         // rotation: "-=45",
         clearProps: 'opacity, scale'
     });
-
-
+    //
+    //
     initTl.addLabel("ani");
     initTl.fromTo(nameup, 1, {
         opacity: 0
@@ -129,12 +139,12 @@ function startPage() {
     }, {
         // opacity: .2,
         // rigth: 0,
-        x: 100,
-        opacity: .05,
+        x: 30,
+        opacity: .5,
         // // rotation: "-=45",
         clearProps: ' scale'
     }, "ani");
-
+    //
     initTl.fromTo(namedown, 1, {
         opacity: 0
         // scale: .01
@@ -142,25 +152,57 @@ function startPage() {
         // rotation: "+=45"
     }, {
         // opacity: .2,
-        opacity: .05,
-        x:-100,
+        opacity: .5,
+        x: -15,
         // // rotation: "-=45",
         clearProps: 'scale,x'
     }, "ani");
-
-
-    initTl.delay(2);
-    initTl.fromTo(logo, 2, {
-        opacity: 0,
-        scale: .1,
-        rotation: "+=45"
-
-    }, {
-        opacity: 1,
-        scale: 1,
-        rotation: "-=45",
-        clearProps: 'opacity, scale'
-    });
+    //
+    //
+    // initTl.delay(2);
+    // initTl.fromTo(logo, 2, {
+    //     opacity: 0,
+    //     scale: .1,
+    //     rotation: "+=45"
+    //
+    // }, {
+    //     opacity: 1,
+    //     scale: 1,
+    //     rotation: "-=45",
+    //     clearProps: 'opacity, scale'
+    // });
 
     initTl.play();
 }
+
+//////////////////////////////////////////////////////////////////////SOBRE LA LINEA AUTOMATICA
+var $tickerWrapper = $(".tickerwrapper");
+var $list = $tickerWrapper.find("ul.list");
+var $clonedList = $list.clone();
+
+var listWidth = 20;
+
+$list.find("li").each(function (i) {
+    listWidth += $(this, i).outerWidth(true);
+});
+
+var endPos = 0;
+
+$list.add($clonedList).css({
+    "width": (listWidth) + "px"
+});
+
+$clonedList.addClass("cloned").appendTo($tickerWrapper);
+
+//TimelineMax
+var infinite = new TimelineMax({force3D: true, repeat: -1, paused: false});
+var time = 400;
+
+
+infinite.addLabel("tick");
+infinite.fromTo($list, time, {x: 0}, {x: +listWidth + listWidth, ease: Linear.easeNone}, 0, "tick");
+infinite.fromTo($clonedList, time * 1.5, {x: -listWidth}, {
+    x: +listWidth + listWidth,
+    ease: Linear.easeNone
+}, 0, "tick");
+

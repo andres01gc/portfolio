@@ -17,7 +17,7 @@ function nextproj() {
         nextIndex = 0;
         currentIndex = nextIndex;
     }
-    goIn(nextIndex);
+      goIn(nextIndex);
 }
 
 $(document).ready(function () {
@@ -32,55 +32,64 @@ $(document).ready(function () {
 
 function goOut(ci) {
 
-    removeClass($(".pro-page:eq(" + currentIndex + ")")[0], "cur");
 
     // remo
     // projects[ci + 1].style.visibility = "visible";
     // $(".project-page:eq(0)")[0].
     // removeClass($(".project-page:eq(0)")[0], "current");
 
-    // var image = $(".project-page:eq(" + currentIndex + ") > .project-image:eq(0)")[0];
-    // var title = $(".project-page:eq(" + currentIndex + ") > .upside > .project-tittle:eq(0)")[0];
-    // var content = $(".project-page:eq(" + currentIndex + ") > .downside > .project-content:eq(0)")[0];
-    //
-    // // console.log(image);
-    // // console.log(title);
-    // // console.log(content);
-    // // // Title animation
+    var image = $(".pro-page:eq(" + ci + ") > .project-image:eq(0)")[0];
+    var title = $(".pro-page:eq(" + ci + ") > .upside > .project-tittle:eq(0)")[0];
+    var content = $(".pro-page:eq(" + ci + ") > .downside > .project-content:eq(0)")[0];
+    var bg = $(".pro-page:eq(" + ci + ") > .full-img:eq(0)")[0];
+
     // //PARA REMOVER EL CURRENT PRINCIPAL , SE DEBE ESCOGEER EL ULTIMO EN TERMINAR, APARENTEMENTE O EL PRIMERO .__.
+    console.log(image);
+    console.log(title);
+    console.log(content);
+    console.log(bg);
+
+
+    var outTimeline = new TimelineLite({
+        onUpdate: function () {
+            // isUpdating = true;
+        },
+        onComplete: function () {
+            removeClass($(".pro-page:eq(" + ci + ")")[0], "cur");
+
+            // isUpdating = false;
+            // console.log("acaba ingreso");
+            // projects[ci].style.visibility = "hidden";
+        }
+    });
     //
-    // var outTimeline = new TimelineLite({
-    //     onUpdate: function () {
-    //         // isUpdating = true;
-    //     },
-    //     onComplete: function () {
-    //         isUpdating = false;
-    //         console.log("acaba ingreso");
-    //         projects[ci].style.visibility = "hidden";
-    //     }
-    // });
-    //
-    // outTimeline.addLabel("out");
-    // // outTimeline.
-    // outTimeline.add(
-    //     TweenMax.to(title, .5, {
-    //         x: -200,
-    //         opacity: 0, clearProps: 'opacity, x'
-    //     }), "out"
-    // );
-    // outTimeline.add(
-    //     TweenMax.to(content, .5, {
-    //         x: -200,
-    //         opacity: 0, clearProps: 'opacity, x'
-    //     }), "out");
-    //
-    // outTimeline.add(
-    //     TweenMax.to(image, .5, {
-    //         x: -200,
-    //         opacity: 0, clearProps: 'opacity, x'
-    //     }), "out");
-    //
-    // outTimeline.play();
+    outTimeline.addLabel("out");
+    // outTimeline.
+    outTimeline.add(
+        TweenMax.to(title, .5, {
+            x: -200,
+            opacity: 0, clearProps: 'opacity, x'
+        }), "out"
+    );
+    outTimeline.add(
+        TweenMax.to(bg, .5, {
+            opacity: 0, clearProps: 'opacity, x'
+        }), "out"
+    );
+
+    outTimeline.add(
+        TweenMax.to(content, .5, {
+            x: -200,
+            opacity: 0, clearProps: 'opacity, x'
+        }), "out");
+
+    outTimeline.add(
+        TweenMax.to(image, .5, {
+            x: -200,
+            opacity: 0, clearProps: 'opacity, x'
+        }), "out");
+
+    outTimeline.play();
 
 }
 
@@ -91,56 +100,57 @@ function removeCurrentClass(element) {
 function goIn(nextIn) {
     addClass($(".pro-page:eq(" + currentIndex + ")")[0], "cur");
 
-    // console.log(" qdfasdvasñdvlm");
+    var image = $(".pro-page:eq(" + nextIn + ") > .project-image:eq(0)")[0];
+    var title = $(".pro-page:eq(" + nextIn + ") > .upside > .project-tittle:eq(0)")[0];
+    var content = $(".pro-page:eq(" + nextIn + ") > .downside > .project-content:eq(0)")[0];
+    var bg = $(".pro-page:eq(" + nextIn + ") > .full-img:eq(0)")[0];
+
+
+    var inTimeLine = new TimelineMax({
+        onUpdate: function () {
+        },
+        onComplete: function () {
+
+        }
+    });
     //
-    // addClass(projects[nextIn], "current");
-    //
-    // // projects[nextIn].style.visibility = "visible";
-    // var image = $(".project-page:eq(" + nextIn + ") > .project-image:eq(0)")[0];
-    // var title = $(".project-page:eq(" + nextIn + ") > .upside > .project-tittle:eq(0)")[0];
-    // var content = $(".project-page:eq(" + nextIn + ") > .downside > .project-content:eq(0)")[0];
-    //
-    // console.log(image);
-    // console.log(title);
-    // console.log(content);
-    //
-    //
-    // var inTimeLine = new TimelineMax({
-    //     onUpdate: function () {
-    //     },
-    //     onComplete: function () {
-    //
-    //     }
-    // });
-    //
-    // inTimeLine.addLabel("ani");
-    //
-    // inTimeLine.fromTo(title, .5, {
-    //     opacity: 0,
-    //     scale: .8
-    // }, {
-    //     opacity: 1,
-    //     scale: 1,
-    //     clearProps: 'opacity, scale'
-    // }, "ani");
-    // inTimeLine.fromTo(image, .5, {
-    //     opacity: 0,
-    //     scale: .8
-    // }, {
-    //     opacity: 1,
-    //     scale: 1,
-    //     clearProps: 'opacity, scale'
-    // }, "ani");
-    // inTimeLine.fromTo(content, .5, {
-    //     opacity: 0,
-    //     scale: .8
-    // }, {
-    //     opacity: 1,
-    //     scale: 1,
-    //     clearProps: 'opacity, scale'
-    // }, "ani");
-    //
-    // inTimeLine.play();
+    inTimeLine.addLabel("ani");
+
+    inTimeLine.fromTo(title, .5, {
+        opacity: 0,
+        scale: .8
+    }, {
+        opacity: 1,
+        scale: 1,
+        clearProps: 'opacity, scale'
+    }, "ani");
+
+    inTimeLine.fromTo(bg, .5, {
+        opacity: 0
+    }, {
+        opacity: .1,
+        // scale: 1,
+        clearProps: 'opacity, scale'
+    }, "ani");
+
+    inTimeLine.fromTo(image, .5, {
+        opacity: 0,
+        scale: .8
+    }, {
+        opacity: 1,
+        scale: 1,
+        clearProps: 'opacity, scale'
+    }, "ani");
+    inTimeLine.fromTo(content, .5, {
+        opacity: 0,
+        scale: .8
+    }, {
+        opacity: 1,
+        scale: 1,
+        clearProps: 'opacity, scale'
+    }, "ani");
+
+    inTimeLine.play();
 }
 
 

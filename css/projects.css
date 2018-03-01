@@ -91,12 +91,13 @@
     width: 120%;
     height: 120%;
 
-    opacity: .2;
+    opacity: .1;
     -webkit-filter: blur(50px);
     -moz-filter: blur(50px);
     -o-filter: blur(50px);
     -ms-filter: blur(50px);
     filter: blur(50px);
+    inset: 0 0 1em 1em teal; /* background:teal */
 }
 
 .downside {

@@ -11,6 +11,7 @@
     <link rel="stylesheet" type="text/css" href="css/contact.css">
     <link rel="stylesheet" type="text/css" href="css/projects.css">
 
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js"></script>
     <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.6/jquery.fullpage.css"/>-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
@@ -18,275 +19,246 @@
             src="http://code.jquery.com/jquery-3.3.1.min.js"
             integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
             crossorigin="anonymous"></script>
-</head>
 
+
+    <!--/////////////BOUT FONTS-->
+
+    <link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Oxygen:300,400,700" rel="stylesheet">
 <body class="main-view">
-<!--/////////////////////////////////////////////////////////////BARRA DE NAVEGACION -->
-<nav class="bar">
-    <img class="logo" style="width: 80px;" src="images/logosymbol.svg">
-    <!--<div class="nav-logo">-->
-    <!--</div>-->
-    <ul id="nav-buttons">
-        <li>
-            <a class="main-route" data-in="goHome">HOME</a>
-        </li>
-        <li>
-            <a class="main-route" data-in="goAbout">WHO AM I?</a>
-        </li>
-        <li>
-            <a class="main-route" data-in="goProjects">PROJECTS</a>
-        </li>
-        <li>
-            <a class="main-route" data-in="goContact">CONTACT</a>
-        </li>
-    </ul>
-</nav>
+<div class="mainbg">
+    <!--/////////////////////////////////////////////////////////////BARRA DE NAVEGACION -->
+    <nav class="bar">
+        <img class="logo" style="width: 80px;" src="images/logosymbol.svg">
 
-<!--____________________________________________________________________________SLIDERS-->
-<div class="page p-home is-current">
-    <!--<canvas id="canvas-home" width="1920" height="1080"></canvas>-->
+        <ul id="nav-buttons">
+            <li>
+                <a class="class="main-route"main-route" data-in="goHome">HOME</a>
+            </li>
+            <li>
+                <a class="main-route" data-in="goAbout">WHO AM I?</a>
+            </li>
+            <li>
+                <a class="main-route" data-in="goProjects">PROJECTS</a>
+            </li>
+            <li>
+                <a class="main-route" data-in="goContact">CONTACT</a>
+            </li>
+        </ul>
+    </nav>
 
-    <svg opacity=".5" class="other" version="1.2" width="0" height="0" viewBox="0 0 740 600">
-        <defs>
-            <clipPath opacity=".5" id="mask">
-                <polygon points="1,1079.4 539.1,0.6 2189.8,0.6 1651.7,1079.4 	"/>
-            </clipPath>
-        </defs>
-    </svg>
+    <!--____________________________________________________________________________SLIDERS-->
+    <div class="page p-home is-current">
 
-    <div class="split-part">
-        <div class="home-upside">
+
+        <div class="ph-content">
+            <p class="home-phrase">I am Andrés González</p>
+            <p class="ph2" id="#msg"> I make <span class="high">interactive web appliactions</span></p>
+        </div>
+
+
+        <div class="homebg">
             <div class="home-img up"></div>
-            <div class="home-patt"></div>
-
-            <p class="home-myname">I'M ANDRÉS</p>
-
-
-            <!--//codigo tomado de https://codepen.io/hackfin/pen/yGueb-->
-            <div>
-                <div class="tickerwrapper">
-                    <ul class='list'>
-                        <li class='listitem'>
-                            <span>COLOMBIAN MEDIA DEVELOPER-</span>
-                        </li>
-                        <li class='listitem'>
-                            <span>COLOMBIAN MEDIA DEVELOPER-</span>
-                        </li>
-                        <li class='listitem'>
-                            <span>COLOMBIAN MEDIA DEVELOPER-</span>
-                        </li>
-                        <li class='listitem'>
-                            <span>COLOMBIAN MEDIA DEVELOPER-</span>
-                        </li>
-                        <li class='listitem'>
-                            <span>COLOMBIAN MEDIA DEVELOPER-</span>
-                        </li>
-                        <li class='listitem'>
-                            <span>COLOMBIAN MEDIA DEVELOPER-</span>
-                        </li>
-                        <li class='listitem'>
-                            <span>COLOMBIAN MEDIA DEVELOPER-</span>
-                        </li>
-                        <li class='listitem'>
-                            <span>COLOMBIAN MEDIA DEVELOPER-</span>
-                        </li>
-                        <li class='listitem'>
-                            <span>COLOMBIAN MEDIA DEVELOPER-</span>
-                        </li>
-                        <li class='listitem'>
-                            <span>COLOMBIAN MEDIA DEVELOPER-</span>
-                        </li>
-                        <li class='listitem'>
-                            <span>COLOMBIAN MEDIA DEVELOPER-</span>
-                        </li>
-                        <li class='listitem'>
-                            <span>COLOMBIAN MEDIA DEVELOPER-</span>
-                        </li>
-                        <li class='listitem'>
-                            <span>COLOMBIAN MEDIA DEVELOPER-</span>
-                        </li>
-                        <li class='listitem'>
-                            <span>COLOMBIAN MEDIA DEVELOPER-</span>
-                        </li>
-                        <li class='listitem'>
-                            <span>COLOMBIAN MEDIA DEVELOPER-</span>
-                        </li>
-                        <li class='listitem'>
-                            <span>COLOMBIAN MEDIA DEVELOPER-</span>
-                        </li>
-                        <li class='listitem'>
-                            <span>COLOMBIAN MEDIA DEVELOPER-</span>
-                        </li>
-                        <li class='listitem'>
-                            <span>COLOMBIAN MEDIA DEVELOPER-</span>
-                        </li>
-                        <li class='listitem'>
-                            <span>COLOMBIAN MEDIA DEVELOPER-</span>
-                        </li>
-
-                    </ul>
-                </div>
-
-            </div>
-
-        </div>
-
-        <div class="home-split-line"></div>
-        <div class="home-downside">
-
             <div class="home-img down"></div>
-            <div class="home-patt"></div>
-            <p class="home-myname-down">I'M ANDRÉS</p>
         </div>
-    </div>
 
-
-    <div class="home-container ">
-        <div class="home-rect"></div>
-        <h1 class="home-msg">Welcome to my portfoliio</h1>
         <div class="home-line"></div>
 
-        <div class="homemenu">
-            <button class="main-route" data-in="goAbout"><span class="strike">WHO I AM?</span></button>
-            <button class="main-route" data-in="goProjects"><span class="strike">PROJECTS</span></button>
-            <button class="main-route" data-in="goContact"><span class="strike">CONTACT</span></button>
+        <div class="home-cont-autotext">
+            <p class="home-autotext">COLOMBIAN INTERACTIVE MEDIA DEVELOPER - COLOMBIAN INTERACTIVE MEDIA DEVELOPER
+                 -COLOMBIAN INTERACTIVE MEDIA DEVELOPER - COLOMBIAN INTERACTIVE MEDIA DEVELOPER - COLOMBIAN INTERACTIVE
+                MEDIA
+                DEVELOPER - COLOMBIAN INTERACTIVE MEDIA DEVELOPER - COLOMBIAN INTERACTIVE MEDIA DEVELOPER</p>
+        </div>
+
+        <div class="home-menu">
+            <p class="main-route" id="h-ab" data-in="goAbout">About me</p>
+            <p class="main-route" id="h-pr" data-in="goProjects">Projects</p>
+            <p class="main-route" id="h-cnt" data-in="goContact">Contact</p>
         </div>
     </div>
+    <!--_____________________________________________________________WHO I AM?-->
+    <div class="page p-about ">
+        <div class="ab-full-img"></div>
 
-</div>
-<!--_____________________________________________________________WHO I AM?-->
-<div class="page p-about">
-
-
-    <div class="cont-full-img"></div>
-
-    <div class="about-up">
-        <div class="about-image-up">
+        <div class="ab-img">
         </div>
-        <div class="about-container-1">
-            <div class="about-rect"></div>
-            <h1 class="about-tittle">Let me introduce myself.</h1>
-            <div class="about-line"></div>
-            <div class="about-content">
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam dignissimos dolorem
-                    doloremque esse expedita fuga harum inventore iste modi neque odio pariatur, provident
-                    recusandae
-                    repudiandae saepe sunt suscipit voluptate voluptatibus!</p>
+        <div class="ab-splitline"></div>
+
+        <div class="ab-container">
+            <h1 class="ab-tittle">Interactive media developer</h1>
+            <div class="ab-line"></div>
+
+            <p class="ab-content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet esse, nisi. Cumque ea
+                labore nemo recusandae repudiandae temporibus. Accusamus illo laborum molestiae molestias, natus nulla
+                quaerat saepe totam ullam voluptatum!</p>
+
+            <div class="ab-desgtittle">Design Tools</div>
+
+            <div class="ab-desg-svgs">
+                <a><img style="	width: 40px;" src="images/networks/Behance.svg"> </a>
+                <a><img style="	width: 40px;" src="images/networks/facebook.svg"> </a>
+                <a><img style="	width: 40px;" src="images/networks/github.svg"> </a>
+                <a><img style="	width: 40px;" src="images/networks/instagram.svg"> </a>
+                <a><img style="	width: 40px;" src="images/networks/linkedin.svg"> </a>
+                <a><img style="	width: 40px;" src="images/networks/spotify.svg"> </a>
             </div>
-            <!--<p class="project-route project-next">NEXT 11</p>-->
-        </div>
-    </div>
-    <div class="home-split-line"></div>
-    <div class="about-down">
-        <div class="about-image-down">
-        </div>
-        <div class="about-container-2">
-            <div class="about-rect-2"></div>
-            <h1 class="about-tittle-2">Works side</h1>
-            <div class="about-line-2"></div>
-            <div class="about-content-2">
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam dignissimos dolorem
-                    doloremque esse expedita fuga harum inventore iste modi neque odio pariatur, provident
-                    recusandae
-                    repudiandae saepe sunt suscipit voluptate voluptatibus!</p>
+
+
+            <div class="ab-desgtittle">Dev Tools</div>
+
+            <div class="ab-desg-svgs">
+                <a><img style="	width: 40px;" src="images/networks/Behance.svg"> </a>
+                <a><img style="	width: 40px;" src="images/networks/facebook.svg"> </a>
+                <a><img style="	width: 40px;" src="images/networks/github.svg"> </a>
+                <a><img style="	width: 40px;" src="images/networks/instagram.svg"> </a>
+                <a><img style="	width: 40px;" src="images/networks/linkedin.svg"> </a>
+                <a><img style="	width: 40px;" src="images/networks/spotify.svg"> </a>
             </div>
-            <!--<p class="project-route project-next">NEXT 11</p>-->
+
         </div>
 
 
+        <!--<div class="ab-img-down">-->
+        <!--<div id="map"></div>-->
+
+        <!--</div>-->
+
+
+        <!--<div class="ab-msg-up">-->
+        <!--<h1 class="ab-tittle"> Interactive media developer</h1>-->
+        <!--<div class="ab-tit-line"></div>-->
+        <!--<p class="">-->
+        <!--Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi architecto dolorem dolorum enim eos error-->
+        <!--eveniet incidunt inventore, magni, maxime mollitia numquam, officia porro quasi temporibus veritatis vero?-->
+        <!--A,-->
+        <!--vitae?-->
+        <!--</p>-->
+
+        <!--<div id="map" style="width:400px;height:400px">-->
+
+        <!--<div class="about-up">-->
+        <!--<div class="about-image-up">-->
+
+
+        <!--</div>-->
+
+
+        <!--</div>-->
+        <!--<div class="home-split-line"></div>-->
+
     </div>
 
+    <div class="page p-projects">
+        <div class="pro-page cur">
+            <div class="full-img"></div>
+            <div class="pro-procontent">
+                <div class="pro-proimage"></div>
+
+                <div class="pr-infopro">
+
+                    <h1 class="project-tittle">Munnai</h1>
+
+                    <p class="pro-usedtools">
+                        Ai, Ps, Java, Android
+                    </p>
+                    <p class="project-content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab autem
+                        consequatur
+                        deleniti
+                        distinctio,
+                        eius eveniet hic minima minus nam, necessitatibus omnis optio quod sed temporibus totam vitae
+                        voluptatem! Perferendis, suscipit!</p>
+                </div>
+
+                <div class="ncontainer">01</div>
+                <div class="pr-viewbt">
+                    <div class="pr-viewpro">View peoject</div>
+                </div>
+            </div>
+            <div class="lf">
+                <p>go back</p>
+                <div class="ln"></div>
+            </div>
+        </div>
+        <div class="rg">
+            <p>go next</p>
+            <div class="ln"></div>
+        </div>
+
+        <div class="pro-page">
+            <div class="full-img"></div>
+            <div class="pro-procontent"></div>
+            <div class="project-line"></div>
+            <div class="upside">
+                <h1 class="project-tittle">Munnai 2</h1>
+            </div>
+
+            <div class="home-split-line"></div>
+            <div class="downside">
+                <p class="project-content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab autem
+                    consequatur
+                    deleniti
+                    distinctio,
+                    eius eveniet hic minima minus nam, necessitatibus omnis optio quod sed temporibus totam vitae
+                    voluptatem! Perferendis, suscipit!</p>
+                <p class="project-next">next project</p>
+            </div>
+        </div>
+
+        <div class="pro-page">
+            <div class="full-img"></div>
+            <div class="pro-procontent"></div>
+            <div class="project-line"></div>
+            <div class="upside">
+                <h1 class="project-tittle">Munnai 3 </h1>
+            </div>
+
+            <div class="home-split-line"></div>
+            <div class="downside">
+                <p class="project-content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab autem
+                    consequatur
+                    deleniti
+                    distinctio,
+                    eius eveniet hic minima minus nam, necessitatibus omnis optio quod sed temporibus totam vitae
+                    voluptatem! Perferendis, suscipit!</p>
+                <p class="project-next">next project</p>
+            </div>
+        </div>
+    </div>
+    <div class="page p-contact ">
+        <div class="cont-full-img"></div>
+
+
+        <div class="cont">
+
+            <h1 class="contact-tittle">Let´s talk!</h1>
+            <div class="contact-content">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam dignissimos dolorem
+                    doloremque
+                    esse expedita fuga !</p>
+            </div>
+
+            <p class="mail"><a href="mailto:anfgc01@gmail.com?Subject=Hey you, lets talk!" target="_top">MAIL
+                ME</a></p>
+
+            <p class="msg">or following on something else ;) </p>
+
+            <div class="accounts">
+                <a><img style="	width: 30px;" src="images/networks/Behance.svg"> </a>
+                <a><img style="	width: 30px;" src="images/networks/facebook.svg"> </a>
+                <a><img style="	width: 30px;" src="images/networks/github.svg"> </a>
+                <a><img style="	width: 30px;" src="images/networks/instagram.svg"> </a>
+                <a><img style="	width: 30px;" src="images/networks/linkedin.svg"> </a>
+                <a><img style="	width: 30px;" src="images/networks/spotify.svg"> </a>
+            </div>
+        </div>
+
+
+        <div id="map"></div>
+    </div>
 </div>
-<!---->
-<div class="page p-projects">
 
-    <div class="pro-page cur">
-        <div class="full-img"></div>
-        <div class="project-image"></div>
-        <div class="project-line"></div>
-        <div class="upside">
-            <h1 class="project-tittle">Munnai 1</h1>
-        </div>
-
-        <div class="home-split-line"></div>
-        <div class="downside">
-            <p class="project-content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab autem
-                consequatur
-                deleniti
-                distinctio,
-                eius eveniet hic minima minus nam, necessitatibus omnis optio quod sed temporibus totam vitae
-                voluptatem! Perferendis, suscipit!</p>
-            <p class="project-next">next project</p>
-        </div>
-    </div>
-
-    <div class="pro-page">
-        <div class="full-img"></div>
-        <div class="project-image"></div>
-        <div class="project-line"></div>
-        <div class="upside">
-            <h1 class="project-tittle">Munnai 2</h1>
-        </div>
-
-        <div class="home-split-line"></div>
-        <div class="downside">
-            <p class="project-content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab autem
-                consequatur
-                deleniti
-                distinctio,
-                eius eveniet hic minima minus nam, necessitatibus omnis optio quod sed temporibus totam vitae
-                voluptatem! Perferendis, suscipit!</p>
-            <p class="project-next">next project</p>
-        </div>
-    </div>
-
-    <div class="pro-page">
-        <div class="full-img"></div>
-        <div class="project-image"></div>
-        <div class="project-line"></div>
-        <div class="upside">
-            <h1 class="project-tittle">Munnai 3 </h1>
-        </div>
-
-        <div class="home-split-line"></div>
-        <div class="downside">
-            <p class="project-content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab autem
-                consequatur
-                deleniti
-                distinctio,
-                eius eveniet hic minima minus nam, necessitatibus omnis optio quod sed temporibus totam vitae
-                voluptatem! Perferendis, suscipit!</p>
-            <p class="project-next">next project</p>
-        </div>
-    </div>
-</div>
-<div class="page p-contact ">
-    <div class="cont-full-img"></div>
-    <div class="cont">
-        <h1 class="contact-tittle">Let´s talk!</h1>
-        <div class="contact-content">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam dignissimos dolorem
-                doloremque
-                esse expedita fuga harum inventore iste modi neque odio pariatur, provident recusandae
-                repudiandae saepe sunt suscipit voluptate voluptatibus!</p>
-        </div>
-
-        <p class="mail"><a href="mailto:anfgc01@gmail.com?Subject=Hey you, lets talk!" target="_top">MAIL
-            ME</a></p>
-
-        <p class="msg">or following on something else ;) </p>
-        <div class="accounts">
-            <a><img style="	width: 30px;" src="images/networks/Behance.svg"> </a>
-            <a><img style="	width: 30px;" src="images/networks/facebook.svg"> </a>
-            <a><img style="	width: 30px;" src="images/networks/github.svg"> </a>
-            <a><img style="	width: 30px;" src="images/networks/instagram.svg"> </a>
-            <a><img style="	width: 30px;" src="images/networks/linkedin.svg"> </a>
-            <a><img style="	width: 30px;" src="images/networks/spotify.svg"> </a>
-        </div>
-    </div>
-</div>
-
-<div class="noise"></div>
+<!--<div class="noise"></div>-->
 <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.15.0/TweenMax.min.js'></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.4/TweenLite.min.js"></script>
 <script src="js/parallax.js"></script>
@@ -298,7 +270,7 @@
 </body>
 
 
-<!--</html>-->
+</html>
 
 
 <!--</div>-->

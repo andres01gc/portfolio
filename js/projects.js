@@ -17,7 +17,7 @@ function nextproj() {
         nextIndex = 0;
         currentIndex = nextIndex;
     }
-      goIn(nextIndex);
+    goIn(nextIndex);
 }
 
 $(document).ready(function () {
@@ -152,6 +152,44 @@ function goIn(nextIn) {
 
     inTimeLine.play();
 }
+
+
+///////////about line tools del who i am
+
+var $tickerWrapper = $(".tickerwrapper-2");
+var $list = $tickerWrapper.find(".list-2");
+var $clonedList = $list.clone();
+
+var listWidth = 20;
+
+$list.find("li").each(function (i) {
+    listWidth += $(this, i).outerWidth(true);
+});
+
+var endPos = 0;
+
+$list.add($clonedList).css({
+    "width": (listWidth) + "px"
+    // "position":"relative"
+});
+
+$clonedList.addClass("cloned").appendTo($tickerWrapper);
+
+//TimelineMax
+var infinite = new TimelineMax({force3D: true, repeat: -1, paused: false});
+var time = 300;
+
+infinite.addLabel("tick");
+infinite.fromTo($list, time, {x: 0,y:"2%"}, {x: +listWidth + listWidth, ease: Linear.easeNone}, 0, "tick");
+infinite.fromTo($clonedList, time * 1.5, {x: -listWidth+20}, {x: +listWidth + listWidth, ease: Linear.easeNone
+}, 0, "tick");
+
+
+
+
+
+
+
 
 
 

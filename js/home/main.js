@@ -5,6 +5,8 @@ var currentElement = document.querySelector('.is-current');
 
 // https://static.pexels.com/photos/140945/pexels-photo-140945.jpeg
 addEventListenerList(routes, 'click', function (e) {
+
+
     currentElement = document.querySelector('.is-current');
     if (!isAnimating) {
         isAnimating = true;
@@ -16,10 +18,11 @@ function changeRoute(nRoute) {
     switch (nRoute) {
         case 'goHome':
             showHome(currentElement);
+
             break;
         case 'goAbout':
-            showAbout(currentElement);
 
+            showAbout(currentElement);
             break;
         case 'goProjects':
             showProjects(currentElement);
@@ -57,9 +60,50 @@ function showAbout(e) {
     outHome(e);//saca de la escena el actual
 }
 
-function scaleUp(el) {
-    // console.log("all+a");
+
+function inAbout(el) {
     addClass(el, 'is-current');
+
+    console.log("inicia la entrada de about");
+    var fullimg = $("ab-full-img");
+    var splitline = $("ab-splitline");
+    var tittle = $("ab-container");
+    var content = $("ab-line");
+
+
+    var inth = new TimelineLite({
+
+        onUpdate: function () {
+            // isUpdating = true;
+        },
+        onComplete: function () {
+
+        }
+
+    });
+
+    inth.fromTo(splitline, .8, {
+        // scale: 1
+        widt: 0
+    }, {
+        width: "100%",
+        opacity: 1,
+        ease: Power3.easeIn
+        // clearProps: 'opacity, scale'
+    }, "pack");
+
+    inth.play();
+}
+
+function outAbout() {
+
+
+}
+
+function scaleUp(el) {
+    addClass(el, 'is-current');
+
+    // console.log("all+a");
     TweenLite.fromTo(el, duration, {
         opacity: 0,
         scale: .8
@@ -97,113 +141,6 @@ function scaleDown(el) {
 }
 
 
-function outHome(el) {
-    addClass(el, 'is-current');
-
-
-    // var logo = $('.logo');
-    var imgup = $('.home-upside');
-    var nameup = $('.home-myname');
-    var splitline = $('.home-split-line');
-    var imgdown = $('.home-downside');
-    var namedown = $('.home-myname-down');
-
-    var hrect = $('.home-rect');
-    var hmsg = $('.home-msg');
-
-    var hline = $('.home-line');
-    var hmenu = $('.homemenu');
-
-    // var name = $('.home-myname-down');
-    // var current = $('.current');
-
-    var outh = new TimelineLite({
-
-        onUpdate: function () {
-            // isUpdating = true;
-        },
-        onComplete: function () {
-            isAnimating = false;
-            removeClass(el, ['is-onTop', 'is-current']);
-            scaleUp(document.querySelector('.p-about'));//entra !
-
-            if (el.classList.contains('p-projects')) {
-                // console.log("wuy");
-
-                document.querySelector(".current").style.visibility = "hidden";
-            } else {
-                // console.log(el.classList);
-            }
-        }
-
-    });
-
-    outh.addLabel("pack");
-    outh.fromTo(imgup, 1, {
-        opacity: 1,
-        scale: 1
-    }, {
-        opacity: 0,
-        y: -500,
-        clearProps: 'opacity, scale, y'
-    }, "pack");
-
-    outh.fromTo(imgdown, 1, {
-        opacity: 1,
-        scale: 1
-    }, {
-        opacity: 0,
-        y: 500,
-
-        clearProps: 'opacity, scale,y'
-    }, "pack");
-
-
-    outh.fromTo(hmsg, .5, {
-        opacity: 1,
-        scale: 1
-    }, {
-        opacity: 0,
-        scale: .5,
-        // width: 0,
-        // x: 400,
-        clearProps: 'opacity, scale'
-    }, "pack");
-    //
-    //
-    outh.fromTo(splitline, .3, {
-        // opacity: 1,
-        // scale: 1
-    }, {
-        opacity: 0,
-        clearProps: 'opacity, scale'
-    }, "pack");
-
-
-    outh.fromTo(hline, 1, {
-        // opacity: 1,
-        // scale: 1
-    }, {
-        opacity: 0, x: 300,
-        clearProps: 'opacity, scale'
-    }, "pack");
-
-
-    outh.fromTo(hmenu, 2, {
-        // opacity: 1,
-        // scale: 1
-    }, {
-        opacity: 0, y: 300,
-        clearProps: 'opacity, scale'
-    }, "pack");
-
-
-
-    outh.play();
-
-}
-
-// utils
 function addClass(el, className) {
     [].concat(className).forEach(function (n) {
         el.classList.add(n);
@@ -226,3 +163,52 @@ $('#parallax').parallax();
 (function () {
 
 })();
+
+
+/////////////////////////////////////////////////////ABOUT WHO I AM
+
+
+google.maps.event.addDomListener(window, 'load', init);
+
+function init() {
+    // Basic options for a simple Google Map
+    // For more options see: https://developers.google.com/maps/documentation/javascript/reference#MapOptions
+    var mapOptions = {
+        // How zoomed in you want the map to start at (always required)
+        zoom: 4.2,
+
+        // The latitude and longitude to center the map (always required)
+
+        center: new google.maps.LatLng(3.4372200, -76.5225000), // New York
+
+        // How you would like to style the map.
+        // This is where you would paste any style found on Snazzy Maps.
+        styles: [{"stylers": [{"visibility": "off"}]}, {
+            "featureType": "water",
+            "stylers": [{"visibility": "on"}, {"color": "#2f343b"}]
+        }, {
+            "featureType": "landscape",
+            "stylers": [{"visibility": "on"}, {"color": "#703030"}]
+        }, {
+            "featureType": "administrative",
+            "elementType": "geometry.stroke",
+            "stylers": [{"visibility": "on"}, {"color": "#2f343b"}, {"weight": 1}]
+        }]
+        , disableDefaultUI: true
+    };
+
+    // Get the HTML DOM element that will contain your map
+    // We are using a div with id="map" seen below in the <body>
+    var mapElement = document.getElementById('map');
+
+    // Create the Google Map using our element and options defined above
+    var map = new google.maps.Map(mapElement, mapOptions);
+
+    // Let's also add a marker while we're at it
+    var marker = new google.maps.Marker({
+        position: new google.maps.LatLng(3.4372200, -76.5225000),
+        map: map,
+        title: 'Aquí, vé!'
+    });
+}
+

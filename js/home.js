@@ -34,7 +34,7 @@ var current = $('.current');
 
 
 $(document).ready(function () {
-    // startPage();
+    startPage();
     initAutoTxt();
     var messenger = new Messenger($('.ph2'));
 
@@ -58,6 +58,9 @@ function startPage() {
             console.log("caskndvañlksndv");
         }
     });
+
+
+
 
 
     initTl.fromTo(homebg, 1, {
@@ -92,6 +95,21 @@ function startPage() {
         "imgs"
     );
 
+    initTl.fromTo(logo, 3, {
+        opacity: 0,
+        scale: .1,
+        rotation: "+=45"
+
+    }, {
+        opacity: 1,
+        scale: 1,
+        rotation: "0",
+        clearProps: 'opacity, scale',
+        ease: Circ.easeOut
+    });
+
+
+
     initTl.fromTo(splitline, 1, {
         opacity: 0,
         // scale: 0,
@@ -106,19 +124,6 @@ function startPage() {
         clearProps: 'opacity, scale'
     }, "2");
 
-
-    initTl.fromTo(logo, 3, {
-        opacity: 0,
-        scale: .1,
-        rotation: "+=45"
-
-    }, {
-        opacity: 1,
-        scale: 1,
-        rotation: "0",
-        clearProps: 'opacity, scale',
-        ease: Circ.easeOut
-    }, "2");
 
 
     initTl.fromTo(phrase, 1, {
@@ -162,78 +167,6 @@ function startPage() {
         },
         "2"
     );
-
-    // initTl.fromTo(pr, 1.5, {
-    //         opacity: 0,
-    //         y: 200
-    //         // scale: 0
-    //     },
-    //     {
-    //         opacity: .8,
-    //         scale: 1,
-    //         ease: Circ.easeOut,
-    //         clearProps: 'scale'
-    //     },
-    //     "bts"
-    // );
-
-    // initTl.fromTo(cnt, 2, {
-    //         opacity: 0, y: 0,
-    //         // scale: 0
-    //     },
-    //     {
-    //         opacity: .8,
-    //         scale: 1,
-    //         y:0,
-    //         ease: Circ.easeOut,
-    //         clearProps: 'scale'
-    //     },
-    //     "bts"
-    // );
-
-
-    //
-    // initTl.fromTo(pr, 2, {
-    //         opacity: 0,
-    //         scale: 1.5,
-    //         height: "150%",
-    //
-    //         rigth: "50%"
-    //         // scale: .01
-    //         // rotation: "+=45"
-    //         // left: 500
-    //     },
-    //     {
-    //         ease: Circ.easeOut, opacity: .9,
-    //         height: "100%",
-    //         scale: 1,
-    //         rigth: "0%", ease: Circ.easeOut,
-    //
-    //         clearProps: 'scale'
-    //     },
-    //     "bts"
-    // );
-
-    // initTl.fromTo(cnt, 3, {
-    //         opacity: 0,
-    //         scale: 1.5,
-    //         height: "150%",
-    //
-    //         rigth: "50%"
-    //         // scale: .01
-    //         // rotation: "+=45"
-    //         // left: 500
-    //     },
-    //     {
-    //         ease: Circ.easeOut, opacity: .9,
-    //         height: "100%",
-    //         scale: 1,
-    //         rigth: "0%", ease: Circ.easeOut,
-    //
-    //         clearProps: 'scale'
-    //     },
-    //     "bts"
-    // );
 
     initTl.play();
 
@@ -368,15 +301,9 @@ function outHome(el) {
     var homebg = $('.homebg');
     var phrase = $('.home-phrase');
     var ph2 = $('.ph2');
-
     var up = $('.up');
-
     var down = $('.down');
-    addClass(el, 'is-current');
 
-
-    // var name = $('.home-myname-down');
-    // var current = $('.current');
 
     var outh = new TimelineLite({
 
@@ -386,17 +313,16 @@ function outHome(el) {
         onComplete: function () {
             isAnimating = false;
             removeClass(el, 'is-current');
-            scaleUp(document.querySelector('.p-about'));//entra !
-
+            console.log("terminó!");
+            inAbout(document.querySelector('.p-about'));//entra !
         }
-
     });
 
     outh.fromTo(menuhome, .8, {
         // scale: 1
     }, {
         scale: .4,
-        opacity: 0,y:50,
+        opacity: 0, y: 50,
         ease: Power3.easeIn
         // clearProps: 'opacity, scale'
     }, "pack");
@@ -412,7 +338,6 @@ function outHome(el) {
     }, "pack");
 
 
-
     // outh.fromTo(phrase, .2, {
     //     // scale: 1
     // }, {
@@ -423,7 +348,7 @@ function outHome(el) {
     // }, "pack");
 
 
-    outh.fromTo(up, 2, {
+    outh.fromTo(up, 1, {
         // scale: 1
     }, {
         // opacity: 0,
@@ -437,7 +362,7 @@ function outHome(el) {
         // clearProps: 'opacity, scale'
     }, "pack");
 
-    outh.fromTo(down, 2, {
+    outh.fromTo(down, 1, {
         // scale: 1
     }, {
         // opacity: 0,
@@ -468,7 +393,7 @@ function outHome(el) {
         // clearProps: 'opacity, scale'
     }, "pack");
 
-    outh.fromTo(splitline, 2, {
+    outh.fromTo(splitline, 1, {
         // scale: 1
     }, {
         // opacity: 0,

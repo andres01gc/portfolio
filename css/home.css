@@ -40,7 +40,7 @@
 
 .home-phrase {
     /*position: absolute;*/
-    font-family: 'Permanent Marker', cursive;
+    font-family: 'Cairo Black', cursive;
     font-size: 3rem;
 
     /*opacity: .8;*/
@@ -49,13 +49,13 @@
 .ph2 {
     /*margin especial para cuadrar el salto de linea de la font permanent marker*/
     margin-top: -50px;
-    font-family: 'Permanent Marker', cursive;
+    font-family: 'Cairo', cursive;
     font-size: 1.8rem;
     color: #F91010;
 }
 
 .ph2 .high {
-    font-family: 'Permanent Marker', cursive;
+    font-family: 'Cairo', cursive;
     font-size: 1.8rem;
     color: #F91010;
 }
@@ -73,7 +73,7 @@
 
 .home-autotext {
     /*position: absolute;*/
-    font-family: 'Permanent Marker', cursive;
+    font-family: 'Cairo Light', cursive;
     text-overflow: clip;
     overflow: hidden;
     /*width: auto;*/
@@ -103,7 +103,7 @@
     position: relative;
     display: inline-block;
     /*z-index: 2;*/
-    font-family: 'Permanent Marker', cursive;
+    font-family: 'Cairo Light', cursive;
     margin: 10px;
     display: inline;
 }

@@ -1,27 +1,22 @@
 var routes = document.querySelectorAll('.main-route');
 var duration = .4;
 var isAnimating = false;
-var currentElement = document.querySelector('.is-current');
 
-// https://static.pexels.com/photos/140945/pexels-photo-140945.jpeg
+
 addEventListenerList(routes, 'click', function (e) {
-
-
     currentElement = document.querySelector('.is-current');
+
     if (!isAnimating) {
         isAnimating = true;
         changeRoute(e.currentTarget.dataset.in);
     }
 });
 
+
 function changeRoute(nRoute) {
+    console.log(nRoute);
     switch (nRoute) {
-        case 'goHome':
-            showHome(currentElement);
-
-            break;
         case 'goAbout':
-
             showAbout(currentElement);
             break;
         case 'goProjects':
@@ -34,44 +29,45 @@ function changeRoute(nRoute) {
 }
 
 function showContact(e) {
-    currentElement = document.querySelector('#nav-buttons').style.visibility = "visible";
-    scaleDown(e);//saca de la escena el actual
-    scaleUp(document.querySelector('.p-contact'));//entra !
+    // currentElement = document.querySelector('#nav-buttons').style.visibility = "visible";
+    // scaleDown(e);//saca de la escena el actual
+    // scaleUp(document.querySelector('.p-contact'));//entra !
+    outHome(e, '.p-contact');
 }
 
 function showHome(e) {
-    currentElement = document.querySelector('#nav-buttons').style.visibility = "hidden";
-    scaleDown(e);//saca de la escena el actual
-    scaleUp(document.querySelector('.p-home'));//entra !
+    // currentElement = document.querySelector('#nav-buttons').style.visibility = "hidden";
+    // scaleDown(e);//saca de la escena el actual
+    // scaleUp(document.querySelector('.p-home'));//entra !
+
 }
 
 function showProjects(e) {
-    document.querySelector('#nav-buttons').style.visibility = "visible";
-//visualizar un primer proyect
-
-    scaleDown(e);//saca de la escena el actual
-    scaleUp(document.querySelector('.p-projects'));//entra !
-
+//     document.querySelector('#nav-buttons').style.visibility = "visible";
+// //visualizar un primer proyect
+//
+//     scaleDown(e);//saca de la escena el actual
+//     scaleUp(document.querySelector('.p-projects'));//entra !
+    outHome(e, '.p-projects');
 }
 
 function showAbout(e) {
     // hace visible la barra de navegacion
-    currentElement = document.querySelector('#nav-buttons').style.visibility = "visible";
+    // currentElement = document.querySelector('#nav-buttons').style.visibility = "visible";
     // console.log("all+a");
-    outHome(e);//saca de la escena el actual
-}
+    outHome(e, '.p-about');//saca de la escena el actual
 
+}
 
 function inAbout(el) {
     addClass(el, 'is-current');
-
     //
     // console.log("inicia la entrada de about");
-    var img = $(".ab-img");
+    var img = $(".mask");
     // var fullimg = $("ab-full");
     var splitline = $(".abline");
-    var autxt= $(".ab-autoText");
-    var tittle = $(".ab-tittle");
+    var autxt = $(".ab-autoText");
+    var tittle = $(".ab-ttl-1");
     var content = $(".ab-content");
 
     var dsgn = $(".dsgn");
@@ -83,19 +79,15 @@ function inAbout(el) {
 
     // console.log(splitline);
     var inth = new TimelineLite({
+
         onUpdate: function () {
+
         },
         onComplete: function () {
 
         }
+
     });
-
-    //
-
-    //
-    //
-
-    //
 
     inth.fromTo(splitline, 1, {
         webkitClipPath: 'polygon(20% 0, 20% 0, 100% 100%, 100% 100%)',
@@ -154,7 +146,6 @@ function inAbout(el) {
         },
         "s"
     );
-
 
     inth.fromTo(dsgn, .5, {
             opacity: -0,
@@ -235,8 +226,6 @@ function inAbout(el) {
             // clearProps: 'opacity, scale'
         }
     );
-
-
     inth.play();
 }
 
@@ -304,28 +293,25 @@ function addEventListenerList(list, event, fn) {
     }
 }
 
-$('#parallax').parallax();
-(function () {
-
-})();
+// $('#parallax').parallax();
+// (function () {
+//
+// })();
 
 
 /////////////////////////////////////////////////////ABOUT WHO I AM
 
 
-google.maps.event.addDomListener(window, 'load', init);
+// google.maps.event.addDomListener(window, 'load', init);
 
 function init() {
     // Basic options for a simple Google Map
     // For more options see: https://developers.google.com/maps/documentation/javascript/reference#MapOptions
     var mapOptions = {
         // How zoomed in you want the map to start at (always required)
-        zoom: 4.2,
-
+        zoom: 3.5,
         // The latitude and longitude to center the map (always required)
-
         center: new google.maps.LatLng(3.4372200, -76.5225000), // New York
-
         // How you would like to style the map.
         // This is where you would paste any style found on Snazzy Maps.
         styles: [{"stylers": [{"visibility": "off"}]}, {
@@ -341,14 +327,11 @@ function init() {
         }]
         , disableDefaultUI: true
     };
-
     // Get the HTML DOM element that will contain your map
     // We are using a div with id="map" seen below in the <body>
     var mapElement = document.getElementById('map');
-
     // Create the Google Map using our element and options defined above
     var map = new google.maps.Map(mapElement, mapOptions);
-
     // Let's also add a marker while we're at it
     var marker = new google.maps.Marker({
         position: new google.maps.LatLng(3.4372200, -76.5225000),
@@ -356,4 +339,6 @@ function init() {
         title: 'Aquí, vé!'
     });
 }
+
+
 

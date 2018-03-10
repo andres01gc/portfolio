@@ -7,7 +7,7 @@
 
     <link rel="stylesheet" type="text/css" href="css/main.css">
     <link rel="stylesheet" type="text/css" href="css/home.css">
-    <link rel="stylesheet" type="text/css" href="css/whoami.css">
+    <link rel="stylesheet" type="text/css" href="css/about.css">
     <link rel="stylesheet" type="text/css" href="css/contact.css">
     <link rel="stylesheet" type="text/css" href="css/projects.css">
 
@@ -24,45 +24,64 @@
     <!--/////////////BOUT FONTS-->
     <link href="https://fonts.googleapis.com/css?family=Oswald:200,300,400&amp;subset=latin-ext" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Oxygen:300,400,700" rel="stylesheet">
-<body class="main-view">
+
+    <meta name="viewport" content="width=device-width, user-scaleble=no, initial-scale=1.0, maximun">
+
+
+</head>
+
+
+<body class="main-view ">
 <div class="mainbg">
     <!--/////////////////////////////////////////////////////////////BARRA DE NAVEGACION -->
     <nav class="bar">
-        <img class="logo" style="width: 80px;" src="images/logosymbol.svg">
+        <img class="logo" src="images/logosymbol.svg">
+        <img id="menubt" class="menubt" src="images/menu.svg">
 
-        <ul id="nav-buttons">
-            <li>
-            </li>
-            <a class="  main-route" data-in="goHome">HOME</a>
-            <li>
-                <a class="main-route" data-in="goAbout">WHO AM I?</a>
-            </li>
-            <li>
-                <a class="main-route" data-in="goProjects">PROJECTS</a>
-            </li>
-            <li>
-                <a class="main-route" data-in="goContact">CONTACT</a>
-            </li>
-        </ul>
+        <!--<ul id="nav-buttons">-->
+        <!--<li>-->
+        <!--</li>-->
+        <!--<a class="  main-route" data-in="goHome">HOME</a>-->
+        <!--<li>-->
+        <!--<a class="main-route" data-in="goAbout">WHO AM I?</a>-->
+        <!--</li>-->
+        <!--<li>-->
+        <!--<a class="main-route" data-in="goProjects">PROJECTS</a>-->
+        <!--</li>-->
+        <!--<li>-->
+        <!--<a class="main-route" data-in="goContact">CONTACT</a>-->
+        <!--</li>-->
+        <!--</ul>-->
+
     </nav>
+
+    <div class="pagemenu">
+
+        <div class="mn-content-autotext">
+            <p class="mn-autotext"> MENU MENU MENU MENU MENU MENU MENU MENU MENU MENU MENU MENU MENU MENU MENU MENU MENU
+                MENU MENU MENU MENU MENU MENU MENU MENU MENU MENU MENU MENU MENU</p>
+        </div>
+
+        <div class="menucontent">
+            <p data-in="mnHome" class="menubtns">Home</p>
+            <p data-in="mnAbout" class="menubtns">About me</p>
+            <p data-in="mnProject" class="menubtns">Project</p>
+            <p data-in="mnContact" class="menubtns">Contact</p>
+        </div>
+    </div>
 
     <!--____________________________________________________________________________SLIDERS-->
     <div class="page p-home is-current">
 
-
-        <div class="ph-content">
-            <p class="home-phrase">I am Andrés González Castro</p>
+        <div class="ph-content ">
+            <p class="home-phrase">Im Andrés González C.</p>
             <p class="ph2" id="#msg"> I make <span class="high">interactive web appliactions</span></p>
         </div>
-
-
         <div class="homebg">
             <div class="home-img up"></div>
             <div class="home-img down"></div>
         </div>
-
         <div class="home-line"></div>
-
         <div class="home-cont-autotext">
             <p class="home-autotext">COLOMBIAN INTERACTIVE MEDIA DEVELOPER - COLOMBIAN INTERACTIVE MEDIA DEVELOPER
                 -COLOMBIAN INTERACTIVE MEDIA DEVELOPER - COLOMBIAN INTERACTIVE MEDIA DEVELOPER - COLOMBIAN INTERACTIVE
@@ -75,81 +94,54 @@
             <p class="main-route" id="h-pr" data-in="goProjects">Projects</p>
             <p class="main-route" id="h-cnt" data-in="goContact">Contact</p>
         </div>
+
     </div>
     <!--_____________________________________________________________WHO I AM?-->
-    <div class="page p-about ">
+    <div class="page p-about">
         <div class="ab-full"></div>
+        <div class="ab-all">
+            <div class="ab-img-container">
+                <!--<h1 class="ab-ttl-1">MAKING WEB</h1>-->
+                <div id="mizq" class="mask imizq">
+                    <div class="im izq"></div>
+                </div>
+                <h1 class="ab-ttl-3">MAKING WEB EVEN BETTER</h1>
 
-        <div class="ab-img">
-        </div>
-
-        <div-linecontainer class="ab-splitline">
-            <div class="abline">
+                <div id="mider" class="mask imder">
+                    <div class="im dr"></div>
+                </div>
             </div>
 
-            <p class="ab-autoText">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus adipisci aliquid
-                aspernatur at commodi, cupiditate delectus deleniti ducimus, laboriosam nesciunt nisi officia
-                perferendis praesentium quibusdam repellat soluta unde, velit voluptate.</p>
-        </div-linecontainer>
+            <div class="ab-container">
+                <div class="ab-tc">
+                    <h1 class="des">DESIGNER</h1>
+                    <h1 class="dev">DEVELOPER</h1>
+                </div>
 
-        <div class="ab-container">
-            <h1 class="ab-tittle">Interactive media developer</h1>
-            <!--<div class="ab-line"></div>-->
+                <p class="ab-content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet esse, nisi. Cumque
+                    ea
+                    labore nemo recusandae repudiandae temporibus. Accusamus illo laborum molestiae molestias, natus
+                    nulla
+                    quaerat saepe totam ullam voluptatum!</p>
 
-            <p class="ab-content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet esse, nisi. Cumque ea
-                labore nemo recusandae repudiandae temporibus. Accusamus illo laborum molestiae molestias, natus nulla
-                quaerat saepe totam ullam voluptatum!</p>
+                <h2>designs tools</h2>
 
-            <!--<div class="ab-desgtittle">Design Tools</div>-->
-
-            <div class="ab-desg-svgs">
-            </div>
-
-
-            <div class="skills">
-                <ul class="dsgn">
-                    <li class="skill-tittle">Dsgn</li>
-
-                    <li>Photoshop</li>
-                    <li>Illustrator</li>
-                    <li>Premiere</li>
-                </ul>
-
-                <ul class="bck">
-                    <li class="skill-tittle">Bck</li>
-
-                    <li>Node.js</li>
-                    <li>Express.js</li>
-                </ul>
-                <ul class="frnt">
-                    <li class="skill-tittle">Frnt</li>
-
-                    <li>CSS</li>
-                    <li>html</li>
-                    <li>JQuery</li>
-                    <li>GSAP</li>
-                </ul>
-                <ul class="pkgmngr">
-                    <li class="skill-tittle">Pkg mngr</li>
-                    <li>Photoshop</li>
-                    <li>Illustrator</li>
-                </ul>
-                <ul class="lnggs">
-                    <li class="skill-tittle">Lnggs</li>
-
-                    <li>Typescript</li>
-                    <li>ES5/ES6</li>
-                    <li>Java/Android</li>
-                    <li>Kotlin</li>
-                </ul>
-
-                <ul class="frmwks">
-                    <li class="skill-tittle">Frmwrks</li>
-                    <li>Angular</li>
-                    <li>Angular.js</li>
-                    <li>Polymer</li>
-                </ul>
-
+                <div class="ab-dsgntools">
+                    <img style="width: 30px;" src="images/design_tools/ai.svg">
+                    <img style="width: 30px;" src="images/design_tools/lr.svg">
+                    <img style="width: 30px;" src="images/design_tools/ps.svg">
+                    <img style="width: 30px;" src="images/design_tools/xd.svg">
+                </div>
+                <h2>dev tools</h2>
+                <div class="ab-devtools">
+                    <img style="width: 30px;" src="images/dev_tools/js.svg">
+                    <img style="width: 26px;" src="images/dev_tools/html.svg">
+                    <img style="width: 30px;" src="images/dev_tools/angular.svg">
+                    <img style="width: 30px;" src="images/dev_tools/android.svg">
+                    <img style="width: 30px;" src="images/dev_tools/node.svg">
+                </div>
+                <div class="bottomspace">
+                </div>
             </div>
         </div>
     </div>
@@ -157,120 +149,113 @@
     <div class="page p-projects">
         <div class="pro-page cur">
             <div class="full-img"></div>
-            <div class="pro-procontent">
-                <div class="pro-proimage"></div>
-
-                <div class="pr-infopro">
-
+            <div class="pr-img">
+            </div>
+            <div class="pro-container">
+                <div class="infoproject">
                     <h1 class="project-tittle">Munnai</h1>
-
-                    <p class="pro-usedtools">
-                        Ai, Ps, Java, Android
-                    </p>
-                    <p class="project-content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab autem
-                        consequatur
-                        deleniti
-                        distinctio,
-                        eius eveniet hic minima minus nam, necessitatibus omnis optio quod sed temporibus totam vitae
-                        voluptatem! Perferendis, suscipit!</p>
+                    <h3 class="pro-usedtools">P5, Ai, Java</h3>
+                    <P class="project-content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. </P>
                 </div>
-
-                <div class="ncontainer">01</div>
-                <div class="pr-viewbt">
-                    <div class="pr-viewpro">View peoject</div>
+                <div class="pr-btmcontainer">
+                    <p class="lin"></p>
+                    <p class="pr-viewpro">next</p>
                 </div>
-            </div>
-            <div class="lf">
-                <p>go back</p>
-                <div class="ln"></div>
-            </div>
-        </div>
-        <div class="rg">
-            <p>go next</p>
-            <div class="ln"></div>
-        </div>
-
-        <div class="pro-page">
-            <div class="full-img"></div>
-            <div class="pro-procontent"></div>
-            <div class="project-line"></div>
-            <div class="upside">
-                <h1 class="project-tittle">Munnai 2</h1>
-            </div>
-
-            <div class="home-split-line"></div>
-            <div class="downside">
-                <p class="project-content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab autem
-                    consequatur
-                    deleniti
-                    distinctio,
-                    eius eveniet hic minima minus nam, necessitatibus omnis optio quod sed temporibus totam vitae
-                    voluptatem! Perferendis, suscipit!</p>
-                <p class="project-next">next project</p>
             </div>
         </div>
 
         <div class="pro-page">
             <div class="full-img"></div>
-            <div class="pro-procontent"></div>
-            <div class="project-line"></div>
-            <div class="upside">
-                <h1 class="project-tittle">Munnai 3 </h1>
+            <div class="pr-img">
             </div>
+            <div class="pro-container">
+                <div class="infoproject">
+                    <h1 class="project-tittle">Munnai</h1>
+                    <h3 class="pro-usedtools">P5, Ai, Java</h3>
+                    <P class="project-content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. </P>
+                </div>
+                <div class="pr-btmcontainer">
+                    <p class="lin"></p>
+                    <p class="pr-viewpro">next</p>
+                </div>
+            </div>
+        </div>
 
-            <div class="home-split-line"></div>
-            <div class="downside">
-                <p class="project-content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab autem
-                    consequatur
-                    deleniti
-                    distinctio,
-                    eius eveniet hic minima minus nam, necessitatibus omnis optio quod sed temporibus totam vitae
-                    voluptatem! Perferendis, suscipit!</p>
-                <p class="project-next">next project</p>
+        <div class="pro-page">
+            <div class="full-img"></div>
+            <div class="pr-img">
+            </div>
+            <div class="pro-container">
+                <div class="infoproject">
+                    <h1 class="project-tittle">Munnai</h1>
+                    <h3 class="pro-usedtools">P5, Ai, Java</h3>
+                    <P class="project-content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. </P>
+                </div>
+                <div class="pr-btmcontainer">
+                    <p class="lin"></p>
+                    <p class="pr-viewpro">next</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="pro-page">
+            <div class="full-img"></div>
+            <div class="pr-img">
+            </div>
+            <div class="pro-container">
+                <div class="infoproject">
+                    <h1 class="project-tittle">Munnai</h1>
+                    <h3 class="pro-usedtools">P5, Ai, Java</h3>
+                    <P class="project-content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. </P>
+                </div>
+                <div class="pr-btmcontainer">
+                    <p class="lin"></p>
+                    <p class="pr-viewpro">next</p>
+                </div>
+
             </div>
         </div>
     </div>
-    <div class="page p-contact ">
+
+    <div class="page p-contact">
+        <!--<div id="map"></div>-->
         <div class="cont-full-img"></div>
-
-
         <div class="cont">
-
             <h1 class="contact-tittle">Let´s talk!</h1>
             <div class="contact-content">
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam dignissimos dolorem
                     doloremque
-                    esse expedita fuga !</p>
+                    esse expedita.</p>
             </div>
+            <p class="mail"><a href="mailto:anfgc01@gmail.com?Subject=Hey you, lets talk!" target="_top">write me an
+                email</a></p>
 
-            <p class="mail"><a href="mailto:anfgc01@gmail.com?Subject=Hey you, lets talk!" target="_top">MAIL
-                ME</a></p>
-
-            <p class="msg">or following on something else ;) </p>
+            <p class="msg">or following on something else ;)</p>
 
             <div class="accounts">
-                <a><img style="	width: 30px;" src="images/networks/Behance.svg"> </a>
-                <a><img style="	width: 30px;" src="images/networks/facebook.svg"> </a>
-                <a><img style="	width: 30px;" src="images/networks/github.svg"> </a>
-                <a><img style="	width: 30px;" src="images/networks/instagram.svg"> </a>
-                <a><img style="	width: 30px;" src="images/networks/linkedin.svg"> </a>
-                <a><img style="	width: 30px;" src="images/networks/spotify.svg"> </a>
+                <a><img style="	width: 25px;" src="images/networks/Behance.svg"> </a>
+                <a><img style="	width: 25px;" src="images/networks/facebook.svg"> </a>
+                <a><img style="	width: 25px;" src="images/networks/github.svg"> </a>
+                <a><img style="	width: 25px;" src="images/networks/instagram.svg"> </a>
+                <a><img style="	width: 25px;" src="images/networks/linkedin.svg"> </a>
+                <a><img style="	width: 25px;" src="images/networks/spotify.svg"> </a>
             </div>
         </div>
-
-
-        <div id="map"></div>
     </div>
 </div>
 
-<!--<div class="noise"></div>-->
+<div class="noise"></div>
+
 <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.15.0/TweenMax.min.js'></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.4/TweenLite.min.js"></script>
 <script src="js/parallax.js"></script>
-<script src="js/home/main.js"></script>
+<script src="js/main.js"></script>
+<script src="js/menu.js"></script>
 <!--<script src="js/home/main-canvas.js"></script>-->
 <script src="js/projects.js"></script>
+<script src="js/contact.js"></script>
 <script src="js/home.js"></script>
+<script src="js/about.js"></script>
 
 </body>
 
@@ -278,10 +263,48 @@
 </html>
 
 
+<!--<div class="skills">-->
+<!--<ul class="dsgn">-->
+<!--<li class="skill-tittle">Dsgn</li>-->
+
+<!--<li>Photoshop</li>-->
+<!--<li>Illustrator</li>-->
+<!--<li>Premiere</li>-->
+<!--</ul>-->
+
+<!--<ul class="bck">-->
+<!--<li class="skill-tittle">Bck</li>-->
+
+<!--<li>Node.js</li>-->
+<!--<li>Express.js</li>-->
+<!--</ul>-->
+<!--<ul class="frnt">-->
+<!--<li class="skill-tittle">Frnt</li>-->
+
+<!--<li>CSS</li>-->
+<!--<li>html</li>-->
+<!--<li>JQuery</li>-->
+<!--<li>GSAP</li>-->
+<!--</ul>-->
+<!--<ul class="pkgmngr">-->
+<!--<li class="skill-tittle">Pkg mngr</li>-->
+<!--<li>Photoshop</li>-->
+<!--<li>Illustrator</li>-->
+<!--</ul>-->
+<!--<ul class="lnggs">-->
+<!--<li class="skill-tittle">Lnggs</li>-->
+
+<!--<li>Typescript</li>-->
+<!--<li>ES5/ES6</li>-->
+<!--<li>Java/Android</li>-->
+<!--<li>Kotlin</li>-->
+<!--</ul>-->
+
+<!--<ul class="frmwks">-->
+<!--<li class="skill-tittle">Frmwrks</li>-->
+<!--<li>Angular</li>-->
+<!--<li>Angular.js</li>-->
+<!--<li>Polymer</li>-->
+<!--</ul>-->
+
 <!--</div>-->
-
-
-<!--<script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.15.0/TweenMax.min.js'></script>-->
-<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.4/TweenLite.min.js"></script>-->
-<!--<script src="js/main.js"></script>-->
-<!--<script src="js/ani_home.js"></script>-->

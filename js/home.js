@@ -31,8 +31,6 @@ function parallaxIt_(e, target, movX, movY) {
 }
 
 var current = $('.current');
-
-
 $(document).ready(function () {
     startPage();
     initAutoTxt();
@@ -60,10 +58,7 @@ function startPage() {
     });
 
 
-
-
-
-    initTl.fromTo(homebg, 1, {
+    initTl.fromTo(homebg, .5, {
             opacity: -1,
             scale: 1.5,
             height: "150%",
@@ -81,7 +76,7 @@ function startPage() {
         "imgs"
     );
 
-    initTl.fromTo(autotxt, 2, {
+    initTl.fromTo(autotxt, 1, {
             opacity: -1,
             width: .0
 
@@ -95,7 +90,7 @@ function startPage() {
         "imgs"
     );
 
-    initTl.fromTo(logo, 3, {
+    initTl.fromTo(logo, 1.5, {
         opacity: 0,
         scale: .1,
         rotation: "+=45"
@@ -109,8 +104,7 @@ function startPage() {
     });
 
 
-
-    initTl.fromTo(splitline, 1, {
+    initTl.fromTo(splitline, .5, {
         opacity: 0,
         // scale: 0,
         left: "50%",
@@ -125,8 +119,7 @@ function startPage() {
     }, "2");
 
 
-
-    initTl.fromTo(phrase, 1, {
+    initTl.fromTo(phrase, .5, {
         opacity: 0,
         scale: .9,
         y: -10
@@ -138,7 +131,7 @@ function startPage() {
         clearProps: ' scale'
     }, "2");
 
-    initTl.fromTo(ph2, 2, {
+    initTl.fromTo(ph2, 1, {
         opacity: 0,
         scale: .9,
         y: -10
@@ -150,10 +143,10 @@ function startPage() {
         clearProps: ' scale'
     }, "2");
 
-    initTl.delay(1);
+    initTl.delay(.5);
 
 
-    initTl.fromTo(menuhome, 2, {
+    initTl.fromTo(menuhome, 1, {
             opacity: 0,
             y: 300,
             scale: 0
@@ -191,13 +184,6 @@ function initAutoTxt() {
         clearProps: 'opacity, scale'
     }, "tick");
 }
-
-//
-// function initMessengr() {
-//
-//     console.clear();
-//
-// }
 
 
 //código tomado de https://codepen.io/bionik/pen/dzBweB por lauri
@@ -291,30 +277,23 @@ var Messenger = function (el) {
     m.init();
 };
 
-
-function outHome(el) {
-
+function outHome(el, nextp) {
     var autotxt = $('.home-cont-autotext');
-    var logo = $('.logo');
     var splitline = $('.home-line');
     var menuhome = $('.home-menu');
-    var homebg = $('.homebg');
-    var phrase = $('.home-phrase');
-    var ph2 = $('.ph2');
     var up = $('.up');
     var down = $('.down');
 
 
     var outh = new TimelineLite({
-
         onUpdate: function () {
             // isUpdating = true;
         },
         onComplete: function () {
             isAnimating = false;
-            removeClass(el, 'is-current');
-            console.log("terminó!");
-            inAbout(document.querySelector('.p-about'));//entra !
+            removeClass(document.querySelector('.is-current'), 'is-current');
+            inAbout(document.querySelector(nextp));
+            console.log("aquó");
         }
     });
 

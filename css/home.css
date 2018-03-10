@@ -7,7 +7,8 @@
     background-repeat: no-repeat;
     background-size: cover;
     /*cambiar a center para solucionar el responsive TODO solucionar la animacion del background en center*/
-    background-position: -0px -900px;
+    /*background-position: -0px -900px;*/
+    background-position: center;
     top: 0px;
     opacity: .2;
     background-blend-mode: multiply;
@@ -32,16 +33,15 @@
     top: 40%;
     /*left: 20%;*/
     width: 100%;
-    font-size: 4em;
-
+    /*font-size: 4em;*/
     text-align: center;
-
+    /*background-color: grey;*/
 }
 
 .home-phrase {
     /*position: absolute;*/
     font-family: 'Cairo Black', cursive;
-    font-size: 3rem;
+    font-size: 3.5rem;
 
     /*opacity: .8;*/
 }
@@ -50,7 +50,7 @@
     /*margin especial para cuadrar el salto de linea de la font permanent marker*/
     margin-top: -50px;
     font-family: 'Cairo', cursive;
-    font-size: 1.8rem;
+    font-size: 2rem;
     color: #F91010;
 }
 
@@ -86,14 +86,16 @@
 }
 
 .home-menu {
+    /*background-color: white;*/
     position: absolute;
     /*margin: 0 auto;*/
     bottom: 15%;
     text-align: center;
     /*background-color: white;*/
-    left: 0;
-    right: 0;
+    /*left: 0;*/
+    /*right: 0;*/
     /*esta es otra manera de centrar!, considerar*/
+    width: 100%;
     left: 50%;
     transform: translateX(-50%);
 
@@ -129,3 +131,45 @@
     height: 50px;
     /*background-color: white;*/
 }
+
+@media (min-width: 320px) {
+    .home-phrase {
+        font-size: 6vw;
+    }
+
+    .ph2 {
+        font-size: 4vw;
+        margin-top: -5vh;
+    }
+
+    .home-autotext {
+        font-size: 2.2vw;
+    }
+
+    .main-route{
+        font-size: 3vw;
+    }
+
+}
+
+@media only screen and (min-width: 481px) {
+    /* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */
+
+}
+
+@media only screen and (min-width: 641px) {
+    /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */
+}
+
+@media only screen and (min-width: 961px) {
+    /* tablet, landscape iPad, lo-res laptops ands desktops */
+}
+
+@media only screen and (min-width: 1025px) {
+    /* big landscape tablets, laptops, and desktops */
+}
+
+@media only screen and (min-width: 1281px) {
+    /* hi-res laptops and desktops */
+}
+

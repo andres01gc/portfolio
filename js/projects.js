@@ -5,7 +5,6 @@ var projects;
 
 
 function nextproj() {
-    console.log("next proj");
 
     goOut(currentIndex);
 
@@ -17,13 +16,12 @@ function nextproj() {
         nextIndex = 0;
         currentIndex = nextIndex;
     }
-    goIn(nextIndex);
+   goIn(nextIndex);
 }
 
 $(document).ready(function () {
     projects = document.querySelectorAll('.pro-page');
-    console.log("slkvnañlskdnñalksndvñalkvd    " + projects.length);
-    var bNext = document.getElementsByClassName("project-next");
+    var bNext = document.getElementsByClassName("pr-viewpro");
     for (var i = 0; i < bNext.length; i++) {
         bNext[i].addEventListener('click', nextproj);
     }
@@ -32,16 +30,12 @@ $(document).ready(function () {
 
 function goOut(ci) {
 
-
-    // remo
-    // projects[ci + 1].style.visibility = "visible";
-    // $(".project-page:eq(0)")[0].
-    // removeClass($(".project-page:eq(0)")[0], "current");
-
-    var image = $(".pro-page:eq(" + ci + ") > .project-image:eq(0)")[0];
-    var title = $(".pro-page:eq(" + ci + ") > .upside > .project-tittle:eq(0)")[0];
-    var content = $(".pro-page:eq(" + ci + ") > .downside > .project-content:eq(0)")[0];
+    var image = $(".pro-page:eq(" + ci + ") > .pr-img:eq(0)")[0];
+    var title = $(".pro-page:eq(" + ci + ") > .pro-container > .infoproject > .project-tittle:eq(0)")[0];
+    var content = $(".pro-page:eq(" + ci + ") > .pro-container > .infoproject > .project-content:eq(0)")[0];
     var bg = $(".pro-page:eq(" + ci + ") > .full-img:eq(0)")[0];
+    var usedtools = $(".pro-page:eq(" + ci + ") > .pro-container > .infoproject > .pro-usedtools:eq(0)")[0];
+
 
     // //PARA REMOVER EL CURRENT PRINCIPAL , SE DEBE ESCOGEER EL ULTIMO EN TERMINAR, APARENTEMENTE O EL PRIMERO .__.
     console.log(image);
@@ -84,6 +78,12 @@ function goOut(ci) {
         }), "out");
 
     outTimeline.add(
+        TweenMax.to(usedtools, .5, {
+            x: -200,
+            opacity: 0, clearProps: 'opacity, x'
+        }), "out");
+
+    outTimeline.add(
         TweenMax.to(image, .5, {
             x: -200,
             opacity: 0, clearProps: 'opacity, x'
@@ -100,9 +100,10 @@ function removeCurrentClass(element) {
 function goIn(nextIn) {
     addClass($(".pro-page:eq(" + currentIndex + ")")[0], "cur");
 
-    var image = $(".pro-page:eq(" + nextIn + ") > .project-image:eq(0)")[0];
-    var title = $(".pro-page:eq(" + nextIn + ") > .upside > .project-tittle:eq(0)")[0];
-    var content = $(".pro-page:eq(" + nextIn + ") > .downside > .project-content:eq(0)")[0];
+    var image = $(".pro-page:eq(" + nextIn + ") > .pr-img:eq(0)")[0];
+    var usedtools = $(".pro-page:eq(" + nextIn + ") > .pro-container > .infoproject > .pro-usedtools:eq(0)")[0];
+    var title = $(".pro-page:eq(" + nextIn + ") > .pro-container > .infoproject > .project-tittle:eq(0)")[0];
+    var content = $(".pro-page:eq(" + nextIn + ") > .pro-container > .infoproject > .project-content:eq(0)")[0];
     var bg = $(".pro-page:eq(" + nextIn + ") > .full-img:eq(0)")[0];
 
 
@@ -128,7 +129,7 @@ function goIn(nextIn) {
     inTimeLine.fromTo(bg, .5, {
         opacity: 0
     }, {
-        opacity: .1,
+        opacity: .3,
         // scale: 1,
         clearProps: 'opacity, scale'
     }, "ani");
@@ -137,10 +138,21 @@ function goIn(nextIn) {
         opacity: 0,
         scale: .8
     }, {
-        opacity: 1,
+        opacity: .5,
         scale: 1,
         clearProps: 'opacity, scale'
     }, "ani");
+
+    inTimeLine.fromTo(usedtools, .5, {
+        opacity: 0,
+        scale: .8
+    }, {
+        opacity: .6,
+        scale: 1,
+        clearProps: 'opacity, scale'
+    }, "ani");
+
+
     inTimeLine.fromTo(content, .5, {
         opacity: 0,
         scale: .8
@@ -180,8 +192,9 @@ var infinite = new TimelineMax({force3D: true, repeat: -1, paused: false});
 var time = 300;
 
 infinite.addLabel("tick");
-infinite.fromTo($list, time, {x: 0,y:"2%"}, {x: +listWidth + listWidth, ease: Linear.easeNone}, 0, "tick");
-infinite.fromTo($clonedList, time * 1.5, {x: -listWidth+20}, {x: +listWidth + listWidth, ease: Linear.easeNone
+infinite.fromTo($list, time, {x: 0, y: "2%"}, {x: +listWidth + listWidth, ease: Linear.easeNone}, 0, "tick");
+infinite.fromTo($clonedList, time * 1.5, {x: -listWidth + 20}, {
+    x: +listWidth + listWidth, ease: Linear.easeNone
 }, 0, "tick");
 
 

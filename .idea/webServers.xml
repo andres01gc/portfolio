@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="76932325-77e0-431e-a121-f27ed33d45fd" name="test">
+        <fileTransfer host="" port="3001">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" />
+          </advancedOptions>
+          <option name="port" value="3001" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

@@ -171,30 +171,22 @@ ul {
 @media only screen and (min-width: 320px) {
     /* smartphones, iPhone, portrait 480x320 phones */
     .bar {
-        /*background-color: rgba(2, 2, 2, 0.9);*/
         position: fixed;
         z-index: 5;
         width: 100%;
 
-        margin-top: 20px;
+        /*margin-top: 1.5em;*/
         box-sizing: border-box;
         display: flex;
         /*text-align: center;*/
         justify-content: space-between;
+        /*background-color: #291F2F;*/
+        height: 8em;
     }
 
     .logo {
         width: 40px;
-        height: auto;
-        margin-left: 30px;
-    }
-
-    .menubt {
-        width: 20px;
-        height: auto;
-        margin: 30px;
-        opacity: .5;
-        /*background-color: #F91010;*/
+        margin-left: 2em;
     }
 
     .mn-content-autotext {
@@ -221,13 +213,16 @@ ul {
         opacity: .5;
     }
 
-    .menubt:hover {
+    .menubt {
         width: 20px;
-        height: auto;
-        margin: 30px;
+        margin-right: 2em;
+        opacity: .5;
+        /*background-color: #F91010;*/
+    }
+
+    .menubt:hover {
         opacity: 1;
         color: #F91010;
-        /*background-color: #F91010;*/
     }
 
     .pagemenu {
@@ -236,7 +231,7 @@ ul {
         width: 100%;
         height: 100%;
         position: fixed;
-        background-color: rgba(2, 2, 2);
+        background-color: rgba(2, 2, 2, 1);
     }
 
     .menuactive {
@@ -266,22 +261,3 @@ ul {
 
 }
 
-@media only screen and (min-width: 481px) {
-    /* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */
-}
-
-@media only screen and (min-width: 641px) {
-    /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */
-}
-
-@media only screen and (min-width: 961px) {
-    /* tablet, landscape iPad, lo-res laptops ands desktops */
-}
-
-@media only screen and (min-width: 1025px) {
-    /* big landscape tablets, laptops, and desktops */
-}
-
-@media only screen and (min-width: 1281px) {
-    /* hi-res laptops and desktops */
-}

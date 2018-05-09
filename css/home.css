@@ -55,21 +55,16 @@
     overflow: hidden;
     text-overflow: clip;
     white-space: nowrap;
-    /*background-color: white;*/
 }
 
 .home-autotext {
-    /*position: absolute;*/
     font-family: 'Cairo Light', cursive;
     text-overflow: clip;
     overflow: hidden;
-    /*width: auto;*/
     font-size: .8rem;
     width: 100%;
     height: 50%;
     opacity: .5;
-
-    /*background-color: #F91010;*/
 }
 
 .home-menu {

@@ -35,7 +35,6 @@ $(document).ready(function () {
     startPage();
     initAutoTxt();
     var messenger = new Messenger($('.ph2'));
-
 });
 
 function startPage() {

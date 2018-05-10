@@ -2,7 +2,6 @@ var routes = document.querySelectorAll('.main-route');
 var duration = .4;
 var isAnimating = false;
 
-
 addEventListenerList(routes, 'click', function (e) {
     currentElement = document.querySelector('.is-current');
 
@@ -11,7 +10,6 @@ addEventListenerList(routes, 'click', function (e) {
         changeRoute(e.currentTarget.dataset.in);
     }
 });
-
 
 function changeRoute(nRoute) {
     console.log(nRoute);

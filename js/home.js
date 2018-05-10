@@ -1,4 +1,6 @@
 var inicioFin = false;
+
+//mueve las imagenes de la ppantalla home
 $('.main-view').mousemove(function (e) {
     if (inicioFin) {
         parallaxIt_(e, '.up', +60, 0);
@@ -7,6 +9,15 @@ $('.main-view').mousemove(function (e) {
     }
 });
 
+function parallaxIt_(e, target, movX, movY) {
+    var relY = e.pageX - $this.offset().left;
+    var relX = e.pageY - $this.offset().top;
+
+    TweenMax.to(target, 2, {
+        x: (relX - $this.width() / 2) / $this.width() * movX,
+        y: (relY - $this.height() / 2) / $this.height() * (movY)
+    });
+}
 
 var $this = $('.main-view');
 
@@ -20,24 +31,17 @@ var $this = $('.main-view');
 //     });
 // }
 
-function parallaxIt_(e, target, movX, movY) {
-    var relY = e.pageX - $this.offset().left;
-    var relX = e.pageY - $this.offset().top;
 
-    TweenMax.to(target, 2, {
-        x: (relX - $this.width() / 2) / $this.width() * movX,
-        y: (relY - $this.height() / 2) / $this.height() * (movY)
-    });
-}
-
-var current = $('.current');
 $(document).ready(function () {
-    startPage();
+    // startHomePage();
+    //inicia el texto automantico que se mueve
     initAutoTxt();
+    //inicia el msg automatico de la página uno
     var messenger = new Messenger($('.ph2'));
 });
 
-function startPage() {
+
+function startHomePage() {
     var autotxt = $('.home-cont-autotext');
     var logo = $('.logo');
     var splitline = $('.home-line');
@@ -52,7 +56,6 @@ function startPage() {
         },
         onComplete: function () {
             inicioFin = true;
-            console.log("caskndvañlksndv");
         }
     });
 
@@ -183,7 +186,6 @@ function initAutoTxt() {
         clearProps: 'opacity, scale'
     }, "tick");
 }
-
 
 //código tomado de https://codepen.io/bionik/pen/dzBweB por lauri
 var Messenger = function (el) {

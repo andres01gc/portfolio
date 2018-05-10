@@ -10,7 +10,7 @@
     <link rel="stylesheet" type="text/css" href="css/contact.css">
     <link rel="stylesheet" type="text/css" href="css/projects.css">
 
-    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js"></script>
+    <!--<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js"></script>-->
     <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.6/jquery.fullpage.css"/>-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
@@ -29,116 +29,100 @@
 
 
 <body class="main-view ">
-<div class="mainbg">
-    <!--/////////////////////////////////////////////////////////////BARRA DE NAVEGACION -->
-    <nav class="bar">
-        <div class="nav-cnt">
-            <img class="logo" src="images/logosymbol.svg">
-            <div class="nav-current">
-                <div class="ttl-current">
-                    Home
-                </div>
-                <img id="menubt" class="menubt" src="images/menu.svg">
+<nav class="bar">
+    <div class="nav-cnt">
+        <img class="logo" src="images/logosymbol.svg">
+        <div class="nav-current">
+            <div class="ttl-current">
+                Home
             </div>
-        </div>
-    </nav>
-    <!--div que se muestra cuando se presiona el menú-->
-    <div class="pagemenu">
-        <div class="mn-content-autotext">
-            <p class="mn-autotext"> MENU MENU MENU MENU MENU MENU MENU MENU MENU MENU MENU MENU MENU MENU MENU MENU MENU
-                MENU MENU MENU MENU MENU MENU MENU MENU MENU MENU MENU MENU MENU</p>
-        </div>
-        <div class="menucontent">
-            <p data-in="mnHome" class="menubtns">Home</p>
-            <p data-in="mnAbout" class="menubtns">About me</p>
-            <p data-in="mnProject" class="menubtns">Project</p>
-            <p data-in="mnContact" class="menubtns">Contact</p>
+            <img id="menubt" class="menubt" src="images/menu.svg">
         </div>
     </div>
+</nav>
 
-    <!--____________________________________________________________________________SLIDERS HOMR-->
-    <div class="page p-home">
+<!--div que se muestra cuando se presiona el menú-->
+<!--<div class="pagemenu">-->
+<!--<div class="mn-content-autotext">-->
+<!--<p class="mn-autotext"> MENU MENU MENU MENU MENU MENU MENU MENU MENU MENU MENU MENU MENU MENU MENU MENU MENU-->
+<!--MENU MENU MENU MENU MENU MENU MENU MENU MENU MENU MENU MENU MENU</p>-->
+<!--</div>-->
+<!--<div class="menucontent">-->
+<!--<p data-in="mnHome" class="menubtns">Home</p>-->
+<!--<p data-in="mnAbout" class="menubtns">About me</p>-->
+<!--<p data-in="mnProject" class="menubtns">Project</p>-->
+<!--<p data-in="mnContact" class="menubtns">Contact</p>-->
+<!--</div>-->
+<!--</div>-->
 
-        <div class="ph-content ">
-            <div class="home-phrase">Welcome to my portfolio</div>
-            <div class="ph2" id="#msg">Welcome to this shit</div>
-        </div>
-        <div class="homebg">
-            <div class="home-img up"></div>
-            <div class="home-img down"></div>
-        </div>
-        <div class="home-line"></div>
-        <div class="home-cont-autotext">
-            <p class="home-autotext">COLOMBIAN INTERACTIVE MEDIA DEVELOPER - COLOMBIAN INTERACTIVE MEDIA DEVELOPER
-                -COLOMBIAN INTERACTIVE MEDIA DEVELOPER - COLOMBIAN INTERACTIVE MEDIA DEVELOPER - COLOMBIAN INTERACTIVE
-                MEDIA
-                DEVELOPER - COLOMBIAN INTERACTIVE MEDIA DEVELOPER - COLOMBIAN INTERACTIVE MEDIA DEVELOPER</p>
-        </div>
+<!--____________________________________________________________________________ TODO SLIDERS HOMR-->
+<!--_____________________________________________________________ TODO WHO I AM?-->
+<!--FONDO INICIAL-->
+<div class="page p-home is-current">
 
-        <div class="home-menu">
-            <p class="main-route" id="h-ab" data-in="goAbout">About me</p>
-            <p class="main-route" id="h-pr" data-in="goProjects">Projects</p>
-            <p class="main-route" id="h-cnt" data-in="goContact">Contact</p>
-        </div>
-
+    <div class="ph-content ">
+        <div class="home-phrase">Welcome to my portfolio</div>
+        <div class="ph2" id="#msg">Welcome to this shit</div>
     </div>
-    <!--_____________________________________________________________TODO WHO I AM?-->
-    <div class="page p-about is-current">
-        <!--FONDO INICIAL-->
-        <div class="ab-all" id="bb">
-            <div class="ab-img-container">
-                <div id="mizq" class="mask imizq">
-                    <div class="im izq"></div>
-                </div>
-                <div id="mider" class="mask imder">
-                    <div class="im dr"></div>
+    <div class="homebg">
+        <div class="home-img up"></div>
+        <div class="home-img down"></div>
+    </div>
+    <div class="home-line"></div>
+    <div class="home-cont-autotext">
+        <p class="home-autotext">COLOMBIAN INTERACTIVE MEDIA DEVELOPER - COLOMBIAN INTERACTIVE MEDIA DEVELOPER
+            -COLOMBIAN INTERACTIVE MEDIA DEVELOPER - COLOMBIAN INTERACTIVE MEDIA DEVELOPER - COLOMBIAN INTERACTIVE
+            MEDIA
+            DEVELOPER - COLOMBIAN INTERACTIVE MEDIA DEVELOPER - COLOMBIAN INTERACTIVE MEDIA DEVELOPER</p>
+    </div>
+
+    <div class="home-menu">
+        <p class="main-route" id="h-ab" data-in="goAbout">About me</p>
+        <p class="main-route" id="h-pr" data-in="goProjects">Projects</p>
+        <p class="main-route" id="h-cnt" data-in="goContact">Contact</p>
+    </div>
+
+</div>
+<div class="page p-about">
+    <div class="ab-all" id="bb">
+
+        <div class="ab-img-container">
+            <div class="mask">
+                <div id="mizq" class="im izq"></div>
+            </div>
+            <div id="mider" class="mask">
+                <div id="mder" class="im dr"></div>
+            </div>
+        </div>
+
+
+        <div class="ab_p">
+            <div class="v-l"></div>
+            <!--TODO PAGINA UNO-->
+            <div class="p_about ">
+                <div id="b_name" class="abb-c-name"><span class="sp-i">I AM</span> ANDRÉS GONZÁLEZ C.</div>
+                <div class="abb-c-c1">
+                    <div class="t1" >
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque dolor harum
+                        laborum natus provident, quaerat voluptates voluptatibus! A, accusantium dolores ducimus
+                        labore, magnam minus porro quaerat, quia repellat vel veritatis.
+                    </div>
+                    <div class="txt-nxt">Tell me more</div>
                 </div>
             </div>
-            <div class="ab_p other_current">
-                <div class="v-l"></div>
-                <!--TODO PAGINA UNO-->
-                <div class="p_about ">
-                    <div class="abb-c-name"><span class="sp-i">I AM</span> ANDRÉS GONZÁLEZ C.</div>
-                    <div class="abb-c-c1">
-                        <div>
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque dolor harum
-                            laborum natus provident, quaerat voluptates voluptatibus! A, accusantium dolores ducimus
-                            labore, magnam minus porro quaerat, quia repellat vel veritatis.
-                        </div>
-                        <div class="txt-nxt">Tell me more</div>
-                    </div>
-                </div>
+        </div>
 
-                <!--TODO PAGINA DOS-->
-                <div class="p_about ">
-                    <div class="l_content">
-                        <div class="d_side"><span class="d_s">DESIGNER</span> SIDE</div>
-                        <div class="txt_l">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet, asperiores beatae,
-                            blanditiis
-                            doloribus eius enim eum, fuga fugiat illo magnam minus nemo nesciunt praesentium recusandae
-                            sequi soluta sunt tempora voluptate?
-                        </div>
-
-                        <div class="ab-dsgntools">
-                            <img class="icon" style="width: 40px;" src="images/design_tools/ai.svg">
-                            <img class="icon" style="width: 40px;" src="images/design_tools/lr.svg">
-                            <img class="icon" style="width: 40px;" src="images/design_tools/ps.svg">
-                            <img class="icon" style="width: 40px;" src="images/design_tools/xd.svg">
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!--TODO PAGINA TRES-->
-            <div class=" p_about">
-                <div class="r_side"><span class="t_s">DEV</span> SIDE</div>
-                <div class="txt_r">
+        <!--TODO PAGINA DOS-->
+        <div class="p_about ">
+            <div class="l_content">
+                <div class="d_side"><span class="d_s">DESIGNER</span> SIDE</div>
+                <div class="txt_l">
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet, asperiores beatae,
                     blanditiis
                     doloribus eius enim eum, fuga fugiat illo magnam minus nemo nesciunt praesentium recusandae
                     sequi soluta sunt tempora voluptate?
                 </div>
+
                 <div class="ab-dsgntools">
                     <img class="icon" style="width: 40px;" src="images/design_tools/ai.svg">
                     <img class="icon" style="width: 40px;" src="images/design_tools/lr.svg">
@@ -146,12 +130,28 @@
                     <img class="icon" style="width: 40px;" src="images/design_tools/xd.svg">
                 </div>
             </div>
-
         </div>
+
+        <!--TODO PAGINA TRES-->
+        <div class="p_about">
+            <div class="r_side"><span class="t_s">DEV</span> SIDE</div>
+            <div class="txt_r">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet, asperiores beatae,
+                blanditiis
+                doloribus eius enim eum, fuga fugiat illo magnam minus nemo nesciunt praesentium recusandae
+                sequi soluta sunt tempora voluptate?
+            </div>
+            <div class="ab-dsgntools">
+                <img class="icon" style="width: 40px;" src="images/design_tools/ai.svg">
+                <img class="icon" style="width: 40px;" src="images/design_tools/lr.svg">
+                <img class="icon" style="width: 40px;" src="images/design_tools/ps.svg">
+                <img class="icon" style="width: 40px;" src="images/design_tools/xd.svg">
+            </div>
+        </div>
+
     </div>
 </div>
 <!--_____________________________________________________________TODO PROJECTS-->
-
 <div class="page p-projects">
     <div class="pro-page cur">
         <div class="full-img"></div>
@@ -222,7 +222,6 @@
         </div>
     </div>
 </div>
-
 <div class="page p-contact">
     <!--<div id="map"></div>-->
     <div class="cont-full-img"></div>
@@ -248,12 +247,13 @@
         </div>
     </div>
 </div>
-</div>
+<!--</div>-->
 <!--le agrega un efecto de noise a la página-->
 <div class="noise"></div>
 
 <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.15.0/TweenMax.min.js'></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.4/TweenLite.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.4/plugins/TextPlugin.min.js"></script>
 <script src="js/parallax.js"></script>
 <script src="js/main.js"></script>
 <!--<script src="js/menu.js"></script>-->

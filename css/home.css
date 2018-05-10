@@ -9,7 +9,7 @@
     width: 100%;
     height: 100%;
     /*opacity: .3;*/
-    background-image: url("https://static.pexels.com/photos/473107/pexels-photo-473107.jpeg");
+    background-image: url("../images/pages/home/bg1.jpeg");
     background-repeat: no-repeat;
     background-size: cover;
     /*cambiar a center para solucionar el responsive TODO solucionar la animacion del background en center*/

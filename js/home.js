@@ -293,7 +293,6 @@ function outHome(el, nextp) {
             isAnimating = false;
             removeClass(document.querySelector('.is-current'), 'is-current');
             inAbout(document.querySelector(nextp));
-            console.log("aquó");
         }
     });
 

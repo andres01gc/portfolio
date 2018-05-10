@@ -61,23 +61,24 @@ function showAbout(e) {
 
 function inAbout(el) {
     addClass(el, 'is-current');
+    // //
+    // // console.log("inicia la entrada de about");
+
+    // var img = $(".mask");
+    var fullimg = $(".ab-img-container");
+    // var splitline = $(".v-l");
+    // var autxt = $(".ab-autoText");
+    // var tittle = $(".ab-ttl-1");
+    // var content = $(".ab-content");
     //
-    // console.log("inicia la entrada de about");
-    var img = $(".mask");
-    // var fullimg = $("ab-full");
-    var splitline = $(".abline");
-    var autxt = $(".ab-autoText");
-    var tittle = $(".ab-ttl-1");
-    var content = $(".ab-content");
-
-    var dsgn = $(".dsgn");
-    var bck = $(".bck");
-    var frnt = $(".frnt");
-    var pkgmngr = $(".pkgmngr");
-    var lnggs = $(".lnggs");
-    var frmwks = $(".frmwks");
-
-    // console.log(splitline);
+    // var dsgn = $(".dsgn");
+    // var bck = $(".bck");
+    // var frnt = $(".frnt");
+    // var pkgmngr = $(".pkgmngr");
+    // var lnggs = $(".lnggs");
+    // var frmwks = $(".frmwks");
+    //
+    // // console.log(splitline);
     var inth = new TimelineLite({
 
         onUpdate: function () {
@@ -88,144 +89,139 @@ function inAbout(el) {
         }
 
     });
-
-    inth.fromTo(splitline, 1, {
-        webkitClipPath: 'polygon(20% 0, 20% 0, 100% 100%, 100% 100%)',
-        width: 0
-    }, {
-        webkitClipPath: 'polygon(20% 0, 100% 0, 100% 100%, 0 100%)',
-        width: "100%",
-        ease: Power3.easeIn
-    });
-
-    inth.fromTo(autxt, 2, {
-            opacity: -0
-            // width: "90%",
-            // y: -20
-
-        }, {
-            opacity: 0.5,
-            // y: 0,
-            // width: "30%",
-            ease:
-            Power3.easeIn
-            // clearProps: 'opacity, scale'
-        },
-        "s"
-    );
-    inth.fromTo(img, 2, {
-        opacity: 0
-    }, {
-        opacity: .2
-        // ease: Power3.easeIn
-    }, "s");
-
-    inth.fromTo(tittle, 1, {
-        opacity: -1,
-        x: 20
-    }, {
-        width: "100%",
-        opacity: 1,
-        x: 0,
-        ease: Power3.easeIn
-        // clearProps: 'opacity, scale'
-    }, "s");
-
-    inth.fromTo(content, 1, {
-            opacity: -2,
-            // width: "90%",
-            y: -20
-
+    //
+    // inth.fromTo(splitline, 1, {
+    //     webkitClipPath: 'polygon(20% 0, 20% 0, 100% 100%, 100% 100%)',
+    //     width: 0
+    // }, {
+    //     webkitClipPath: 'polygon(20% 0, 100% 0, 100% 100%, 0 100%)',
+    //     width: "100%",
+    //     ease: Power3.easeIn
+    // });
+    //
+    inth.fromTo(fullimg, 1.5, {
+            opacity: 0
+            // scale: 0
         }, {
             opacity: 1,
-            y: 0,
-            // width: "30%",
             ease:
-            Power3.easeIn
-            // clearProps: 'opacity, scale'
-        },
-        "s"
-    );
-
-    inth.fromTo(dsgn, .5, {
-            opacity: -0,
-            y: -20
-
-        }, {
-            opacity: 1,
-            y: 0,
-            // width: "30%",
-            ease:
-            Power3.easeIn
-            // clearProps: 'opacity, scale'
+            Power3.easeIn,
+            clearProps: 'opacity, scale'
         }
     );
-
-    inth.fromTo(bck, .5, {
-            opacity: -0,
-            y: -20
-
-        }, {
-            opacity: 1,
-            y: 0,
-            // width: "30%",
-            ease:
-            Power3.easeIn
-            // clearProps: 'opacity, scale'
-        }
-    );
-    inth.fromTo(frnt, .5, {
-            opacity: -0,
-            y: -20
-
-        }, {
-            opacity: 1,
-            y: 0,
-            // width: "30%",
-            ease:
-            Power3.easeIn
-            // clearProps: 'opacity, scale'
-        }
-    );
-    inth.fromTo(pkgmngr, .5, {
-            opacity: -0,
-            y: -20
-
-        }, {
-            opacity: 1,
-            y: 0,
-            // width: "30%",
-            ease:
-            Power3.easeIn
-            // clearProps: 'opacity, scale'
-        }
-    );
-    inth.fromTo(lnggs, .5, {
-            opacity: -0,
-            y: -20
-
-        }, {
-            opacity: 1,
-            y: 0,
-            // width: "30%",
-            ease:
-            Power3.easeIn
-            // clearProps: 'opacity, scale'
-        }
-    );
-    inth.fromTo(frmwks, .5, {
-            opacity: -0,
-            y: -20
-
-        }, {
-            opacity: 1,
-            y: 0,
-            // width: "30%",
-            ease:
-            Power3.easeIn
-            // clearProps: 'opacity, scale'
-        }
-    );
+    // inth.fromTo(img, 2, {
+    //     opacity: 0
+    // }, {
+    //     opacity: .2
+    //     // ease: Power3.easeIn
+    // }, "s");
+    //
+    // inth.fromTo(tittle, 1, {
+    //     opacity: -1,
+    //     x: 20
+    // }, {
+    //     width: "100%",
+    //     opacity: 1,
+    //     x: 0,
+    //     ease: Power3.easeIn
+    //     // clearProps: 'opacity, scale'
+    // }, "s");
+    //
+    // inth.fromTo(content, 1, {
+    //         opacity: -2,
+    //         // width: "90%",
+    //         y: -20
+    //
+    //     }, {
+    //         opacity: 1,
+    //         y: 0,
+    //         // width: "30%",
+    //         ease:
+    //         Power3.easeIn
+    //         // clearProps: 'opacity, scale'
+    //     },
+    //     "s"
+    // );
+    //
+    // inth.fromTo(dsgn, .5, {
+    //         opacity: -0,
+    //         y: -20
+    //
+    //     }, {
+    //         opacity: 1,
+    //         y: 0,
+    //         // width: "30%",
+    //         ease:
+    //         Power3.easeIn
+    //         // clearProps: 'opacity, scale'
+    //     }
+    // );
+    //
+    // inth.fromTo(bck, .5, {
+    //         opacity: -0,
+    //         y: -20
+    //
+    //     }, {
+    //         opacity: 1,
+    //         y: 0,
+    //         // width: "30%",
+    //         ease:
+    //         Power3.easeIn
+    //         // clearProps: 'opacity, scale'
+    //     }
+    // );
+    // inth.fromTo(frnt, .5, {
+    //         opacity: -0,
+    //         y: -20
+    //
+    //     }, {
+    //         opacity: 1,
+    //         y: 0,
+    //         // width: "30%",
+    //         ease:
+    //         Power3.easeIn
+    //         // clearProps: 'opacity, scale'
+    //     }
+    // );
+    // inth.fromTo(pkgmngr, .5, {
+    //         opacity: -0,
+    //         y: -20
+    //
+    //     }, {
+    //         opacity: 1,
+    //         y: 0,
+    //         // width: "30%",
+    //         ease:
+    //         Power3.easeIn
+    //         // clearProps: 'opacity, scale'
+    //     }
+    // );
+    // inth.fromTo(lnggs, .5, {
+    //         opacity: -0,
+    //         y: -20
+    //
+    //     }, {
+    //         opacity: 1,
+    //         y: 0,
+    //         // width: "30%",
+    //         ease:
+    //         Power3.easeIn
+    //         // clearProps: 'opacity, scale'
+    //     }
+    // );
+    // inth.fromTo(frmwks, .5, {
+    //         opacity: -0,
+    //         y: -20
+    //
+    //     }, {
+    //         opacity: 1,
+    //         y: 0,
+    //         // width: "30%",
+    //         ease:
+    //         Power3.easeIn
+    //         // clearProps: 'opacity, scale'
+    //     }
+    // );
     inth.play();
 }
 

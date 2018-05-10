@@ -128,16 +128,17 @@
 }
 
 .home-phrase {
-    font-size: 3em;
+    font-size: 2em;
     font-weight: 700;
     line-height: 0;
 }
 
 .ph2 {
     margin-top: 1em;
-    font-family: 'Cairo', cursive;
-    font-size: 1.5em;
+    font-weight: 500;
+    font-size: 1.2em;
     color: #F91010;
+
     /*line-height: 0;*/
 
 }

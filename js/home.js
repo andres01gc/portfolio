@@ -192,7 +192,7 @@ var Messenger = function (el) {
     var m = this;
 
     m.init = function () {
-        m.codeletters = "&*+%?£@$";
+        m.codeletters = "&*+%?£@$QWERTYUIOPÁSDFGHJKLÑ{ASDFGHJKLÑZXCVBNM";
         m.message = 0;
         m.current_length = 0;
         m.fadeBuffer = false;

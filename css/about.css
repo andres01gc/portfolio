@@ -55,10 +55,8 @@
             rgba(0, 24, 220, 0.6)
     ), url(../images/pages/mockup-mac-02.jpg);
     background-size: cover;
-    /*filter: blur(1em);*/
-    /*opacity: .8;*/
     background-blend-mode: multiply;
-    /*-webkit-filter: blur(2em);*/
+    -webkit-filter: blur(2em);
     opacity: 0;
 }
 

@@ -53,7 +53,7 @@ function inAbout(el) {
 
     var m_der = $("#mder");
     var fullimg = $("#mizq");
-    // var splitline = $(".v-l");
+    var line = $(".v-l");
     var nm = $(".abb-c-name");
     var txt = $(".t1");
     var tnext = $(".txt-nxt");
@@ -141,7 +141,6 @@ function inAbout(el) {
         TweenMax.set('#mder', {
             webkitClipPath: 'polygon(' + arr1[0] + '%' + arr1[1] + '%,' + arr1[2] + '%' + arr1[3] + '%,' + arr1[4] + '%' + arr1[5] + '%,' + arr1[6] + '%' + arr1[7] + '%)',
             opacity: 1,
-            webkitFilter:"blur(1.5em)",
             ease: Power3.easeIn
         });
     };
@@ -156,16 +155,15 @@ function inAbout(el) {
         // width: "100%",
         // ease: Power3.easeIn
     }, 'a');
-
     //
-
-
-    // inth.fromTo(img, 2, {
-    //     opacity: 0
-    // }, {
-    //     opacity: .2
-    //     // ease: Power3.easeIn
-    // }, "s");
+    inth.fromTo(line, 3, {
+        opacity: 2,
+        height: 0
+    }, {
+        opacity: 1,
+        height: '50%',
+        ease: Power3.easeOut
+    }, "a");
     //
     // inth.fromTo(tittle, 1, {
     //     opacity: -1,
@@ -178,101 +176,6 @@ function inAbout(el) {
     //     // clearProps: 'opacity, scale'
     // }, "s");
     //
-    // inth.fromTo(content, 1, {
-    //         opacity: -2,
-    //         // width: "90%",
-    //         y: -20
-    //
-    //     }, {
-    //         opacity: 1,
-    //         y: 0,
-    //         // width: "30%",
-    //         ease:
-    //         Power3.easeIn
-    //         // clearProps: 'opacity, scale'
-    //     },
-    //     "s"
-    // );
-    //
-    // inth.fromTo(dsgn, .5, {
-    //         opacity: -0,
-    //         y: -20
-    //
-    //     }, {
-    //         opacity: 1,
-    //         y: 0,
-    //         // width: "30%",
-    //         ease:
-    //         Power3.easeIn
-    //         // clearProps: 'opacity, scale'
-    //     }
-    // );
-    //
-    // inth.fromTo(bck, .5, {
-    //         opacity: -0,
-    //         y: -20
-    //
-    //     }, {
-    //         opacity: 1,
-    //         y: 0,
-    //         // width: "30%",
-    //         ease:
-    //         Power3.easeIn
-    //         // clearProps: 'opacity, scale'
-    //     }
-    // );
-    // inth.fromTo(frnt, .5, {
-    //         opacity: -0,
-    //         y: -20
-    //
-    //     }, {
-    //         opacity: 1,
-    //         y: 0,
-    //         // width: "30%",
-    //         ease:
-    //         Power3.easeIn
-    //         // clearProps: 'opacity, scale'
-    //     }
-    // );
-    // inth.fromTo(pkgmngr, .5, {
-    //         opacity: -0,
-    //         y: -20
-    //
-    //     }, {
-    //         opacity: 1,
-    //         y: 0,
-    //         // width: "30%",
-    //         ease:
-    //         Power3.easeIn
-    //         // clearProps: 'opacity, scale'
-    //     }
-    // );
-    // inth.fromTo(lnggs, .5, {
-    //         opacity: -0,
-    //         y: -20
-    //
-    //     }, {
-    //         opacity: 1,
-    //         y: 0,
-    //         // width: "30%",
-    //         ease:
-    //         Power3.easeIn
-    //         // clearProps: 'opacity, scale'
-    //     }
-    // );
-    // inth.fromTo(frmwks, .5, {
-    //         opacity: -0,
-    //         y: -20
-    //
-    //     }, {
-    //         opacity: 1,
-    //         y: 0,
-    //         // width: "30%",
-    //         ease:
-    //         Power3.easeIn
-    //         // clearProps: 'opacity, scale'
-    //     }
-    // );
     inth.play();
 }
 

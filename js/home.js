@@ -33,7 +33,7 @@ var $this = $('.main-view');
 
 
 $(document).ready(function () {
-    // startHomePage();
+    startHomePage();
     //inicia el texto automantico que se mueve
     initAutoTxt();
     //inicia el msg automatico de la página uno

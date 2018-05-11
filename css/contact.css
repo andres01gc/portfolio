@@ -1,9 +1,10 @@
 .p-contact {
     background: linear-gradient(#161C2C, #291F2F);
+    /*background-color: aqua;*/
     opacity: 1;
     width: 100%;
     height: 100%;
-    position: absolute;
+    position: fixed;
 }
 
 /*.cont {*/
@@ -69,9 +70,9 @@
     line-height: 1.5;
 }
 
-.p-contact {
-    background-color: peru;
-}
+/*.p-contact {*/
+/*background-color: peru;*/
+/*}*/
 
 .accounts {
     display: flex;
@@ -89,25 +90,76 @@
     cursor: pointer;
 }
 
+.cont-full-img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    /*opacity: .3;*/
+    background-image: url("../images/pages/contact/1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    /*cambiar a center para solucionar el responsive TODO solucionar la animacion del background en center*/
+    /*background-position: -0px -900px;*/
+    background-position: center;
+    top: 0px;
+    opacity: .2;
+    background-blend-mode: multiply;
+    -webkit-filter: grayscale(50%);
+    filter: grayscale(50%);
+}
+
 @media (min-width: 600px) {
 
     .cont {
-        background-color: #F91010;
-        /*top: 1%;*/
         z-index: 1;
         position: absolute;
-        /*margin: 0 auto;*/
-        /*right: 0%;*/
-        /*left: 0%;*/
-        right: 50%;
+        top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
 
-        width: 40%;
-        height: 60%;
+        width: 30%;
+        /*height: 60%;*/
+
         display: flex;
         flex-direction: column;
 
+    }
+
+    .rect {
+        transform: translate(2em, 2.5em);
+        position: absolute;
+        display: flex;
+        width: 95%;
+        height: 95%;
+        background-color: #161C2C;
+        opacity: .4;
+        z-index: -1;
+        line-height: .2em;
+    }
+
+    .pp {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .mail {
+        /*font-family: "Catamaran SemiBold";*/
+        border: 2px solid white;
+        width: 50%;
+        /*margin-top: 2em;*/
+        text-align: center;
+        /*margin: 1em;*/
+        /*padding: 2em;*/
+        margin: 2em;
+    }
+
+    .mail:hover {
+        background: white;
+        color: rebeccapurple;
+        cursor: pointer;
+        text-align: center;
     }
 }
 

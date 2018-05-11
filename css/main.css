@@ -90,7 +90,6 @@ html, body {
     display: inline;
     visibility: visible;
     /*overflow: hidden;*/
-
     backface-visibility: hidden;
 }
 
@@ -264,7 +263,7 @@ ul {
     background: linear-gradient(to right, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0) 95%);
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#33000000', endColorstr='#00000000', GradientType=1); /* IE6-9 */
     align-items: center;
-
+    pointer-events: none;
     justify-content: space-between;
 }
 
@@ -275,7 +274,7 @@ ul {
 @media only screen and (min-width: 600px) {
     .bar {
         position: fixed;
-        z-index: 5;
+        z-index: 10;
         width: 100%;
         box-sizing: border-box;
         /*display: flex;*/

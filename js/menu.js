@@ -29,6 +29,7 @@ document.getElementById("menubt").addEventListener("click", function () {
 var currentPageAcive;
 
 function inMenu() {
+    console.log('se muestra el menú');
     addClass(document.querySelector('.pagemenu'), "menuactive");
     currentPageAcive = document.querySelector('.is-current');
     var pagemenu = $('.pagemenu');

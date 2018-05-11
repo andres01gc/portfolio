@@ -16,6 +16,10 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Cairo:300,400,600,700" rel="stylesheet">
 
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.15.0/TweenMax.min.js'></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.4/TweenLite.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.4/plugins/TextPlugin.min.js"></script>
+
     <script
             src="https://code.jquery.com/jquery-3.3.1.min.js"
             integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
@@ -34,26 +38,26 @@
         <img class="logo" src="images/logosymbol.svg">
         <div class="nav-current">
             <div class="ttl-current">
-                Home
+                <!--Home-->
             </div>
-            <img id="menubt" class="menubt" src="images/menu.svg">
         </div>
+        <img id="menubt" class="menubt" src="images/menu.svg">
     </div>
 </nav>
 
 <!--div que se muestra cuando se presiona el menú-->
-<!--<div class="pagemenu">-->
-<!--<div class="mn-content-autotext">-->
-<!--<p class="mn-autotext"> MENU MENU MENU MENU MENU MENU MENU MENU MENU MENU MENU MENU MENU MENU MENU MENU MENU-->
-<!--MENU MENU MENU MENU MENU MENU MENU MENU MENU MENU MENU MENU MENU</p>-->
-<!--</div>-->
-<!--<div class="menucontent">-->
-<!--<p data-in="mnHome" class="menubtns">Home</p>-->
-<!--<p data-in="mnAbout" class="menubtns">About me</p>-->
-<!--<p data-in="mnProject" class="menubtns">Project</p>-->
-<!--<p data-in="mnContact" class="menubtns">Contact</p>-->
-<!--</div>-->
-<!--</div>-->
+<div class="pagemenu">
+    <div class="mn-content-autotext">
+        <p class="mn-autotext"> MENU MENU MENU MENU MENU MENU MENU MENU MENU MENU MENU MENU MENU MENU MENU MENU MENU
+            MENU MENU MENU MENU MENU MENU MENU MENU MENU MENU MENU MENU MENU</p>
+    </div>
+    <div class="menucontent">
+        <p data-in="mnHome" class="menubtns">Home</p>
+        <p data-in="mnAbout" class="menubtns">About me</p>
+        <p data-in="mnProject" class="menubtns">Project</p>
+        <p data-in="mnContact" class="menubtns">Contact</p>
+    </div>
+</div>
 
 <!--____________________________________________________________________________ TODO SLIDERS HOMR-->
 <!--_____________________________________________________________ TODO WHO I AM?-->
@@ -102,9 +106,8 @@
                 <div id="b_name" class="abb-c-name"><span class="sp-i">I AM</span> ANDRÉS GONZÁLEZ C.</div>
                 <div class="abb-c-c1">
                     <div class="t1">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque dolor harum
-                        laborum natus provident, quaerat voluptates voluptatibus! A, accusantium dolores ducimus
-                        labore, magnam minus porro quaerat, quia repellat vel veritatis.
+                        A colombian guy who loves to make interactive things on your screen combining designing, user
+                        experience and a lot of programming tools to make interactive projects.
                     </div>
                     <div id="tnext" class="txt-nxt">Tell me more</div>
                 </div>
@@ -118,10 +121,8 @@
         <div class="l_content">
             <div class="d_side"><span class="d_s">DESIGNER</span> SIDE</div>
             <div class="txt_l">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet, asperiores beatae,
-                blanditiis
-                doloribus eius enim eum, fuga fugiat illo magnam minus nemo nesciunt praesentium recusandae
-                sequi soluta sunt tempora voluptate?
+                Using new graphical tools that allow improving to create simple and intuitive interfaces that positively
+                influence the user experience.
             </div>
 
             <div id="s2">Next Side</div>
@@ -140,10 +141,9 @@
         <div class="r_content">
             <div class="r_side"><span class="t_s">DEV</span> SIDE</div>
             <div class="txt_r">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet, asperiores beatae,
-                blanditiis
-                doloribus eius enim eum, fuga fugiat illo magnam minus nemo nesciunt praesentium recusandae
-                sequi soluta sunt tempora voluptate?
+                However, I have been seduced by the magical charm of the interactivity offered by the programming
+                allowing to be more ambitious in the projects
+
             </div>
             <div class="ab-devtools">
                 <img class="icon" src="images/design_tools/ai.svg">
@@ -155,7 +155,7 @@
         </div>
     </div>
 </div>
-</div>
+<!--</div>-->
 <!--_____________________________________________________________TODO PROJECTS-->
 <div class="page p-projects">
 
@@ -167,9 +167,9 @@
         <div class="opa"></div>
         <div class="pro-container">
             <div class="infoproject">
-                <h1 class="project-tittle">Geometric Space</h1>
-                <h3 class="pro-usedtools">P5, Ai, Java</h3>
-                <P class="project-content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. </P>
+                <h1 class="project-tittle">Identidad</h1>
+                <h3 class="pro-usedtools">Illustrator, Photoshop</h3>
+                <P class="project-content">Personal Branding coming to life</P>
             </div>
             <div class="pr-btmcontainer">
                 <p class="lin"></p>
@@ -186,9 +186,11 @@
         <div class="opa"></div>
         <div class="pro-container">
             <div class="infoproject">
-                <h1 class="project-tittle">Identidad</h1>
-                <h3 class="pro-usedtools">P5, Ai, Java</h3>
-                <P class="project-content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. </P>
+                <h1 class="project-tittle">Geometryc space</h1>
+                <h3 class="pro-usedtools">Processing, Java, Illustrator</h3>
+                <P class="project-content">This project was created with Processing java framework, and whose main idea
+                    was to create a visualization using the basic drawing tools offered by this framework and the
+                    knowledge learned through the book The nature of code.</P>
             </div>
             <div class="pr-btmcontainer">
                 <p class="lin"></p>
@@ -206,8 +208,8 @@
         <div class="pro-container">
             <div class="infoproject">
                 <h1 class="project-tittle">Secs</h1>
-                <h3 class="pro-usedtools">P5, Ai, Java</h3>
-                <P class="project-content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. </P>
+                <h3 class="pro-usedtools">Processing, Java, Illustrator</h3>
+                <P class="project-content">A puzzle game made based on programming secuences</P>
             </div>
             <div class="pr-btmcontainer">
                 <p class="lin"></p>
@@ -215,7 +217,6 @@
             </div>
         </div>
     </div>
-
 
     <div class="pro-page">
         <div class="full-img p4"></div>
@@ -226,8 +227,8 @@
         <div class="pro-container">
             <div class="infoproject">
                 <h1 class="project-tittle">Spaceko</h1>
-                <h3 class="pro-usedtools">P5, Ai, Java</h3>
-                <P class="project-content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. </P>
+                <h3 class="pro-usedtools">Processing, Illustrator, Java</h3>
+                <P class="project-content">A space game inspired in the classic pachinko game</P>
             </div>
             <div class="pr-btmcontainer">
                 <p class="lin"></p>
@@ -244,13 +245,14 @@
         <div class="opa"></div>
         <div class="pro-container">
             <div class="infoproject">
-                <h1 class="project-tittle">Projecto 1</h1>
-                <h3 class="pro-usedtools">P5, Ai, Java</h3>
-                <P class="project-content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. </P>
+                <h1 class="project-tittle">Photograpic Infografic</h1>
+                <h3 class="pro-usedtools">Photoshop, Illustrator</h3>
+                <P class="project-content">An infographic to learn about the handling of cameras
+                </P>
             </div>
             <div class="pr-btmcontainer">
                 <p class="lin"></p>
-                <p class="pr-viewpro">next</p>
+                <p class="pr-viewpro">Next</p>
             </div>
         </div>
     </div>
@@ -262,53 +264,58 @@
         <div class="opa"></div>
         <div class="pro-container">
             <div class="infoproject">
-                <h1 class="project-tittle">Projecto 2</h1>
+                <h1 class="project-tittle">Space war</h1>
                 <h3 class="pro-usedtools">P5, Ai, Java</h3>
-                <P class="project-content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. </P>
+                <P class="project-content">A new game based in the classic space invaders</P>
             </div>
             <div class="pr-btmcontainer">
                 <p class="lin"></p>
-                <p class="pr-viewpro">next</p>
+                <p class="pr-viewpro">Next</p>
             </div>
         </div>
     </div>
 </div>
 
+
 <div class="page p-contact">
+
+
     <!--<div id="map"></div>-->
     <div class="cont-full-img"></div>
     <div class="cont">
+        <div class="rect">
+
+        </div>
         <h1 class="contact-tittle">Let´s talk!</h1>
+
         <div class="contact-content">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam dignissimos dolorem
-                doloremque
-                esse expedita.</p>
         </div>
-        <p class="mail"><a href="mailto:anfgc01@gmail.com?Subject=Hey you, lets talk!" target="_top">write me an
-            email</a></p>
+        <p>Hey you can say hi! tell me what you want I will response you ;)</p>
 
-        <p class="msg">or following on something else ;)</p>
-
-        <div class="accounts">
-            <a><img style="	width: 25px;" src="images/networks/Behance.svg"> </a>
-            <a><img style="	width: 25px;" src="images/networks/facebook.svg"> </a>
-            <a><img style="	width: 25px;" src="images/networks/github.svg"> </a>
-            <a><img style="	width: 25px;" src="images/networks/instagram.svg"> </a>
-            <a><img style="	width: 25px;" src="images/networks/linkedin.svg"> </a>
-            <a><img style="	width: 25px;" src="images/networks/spotify.svg"> </a>
+        <div class="pp">
+            <p class="mail"><a href="mailto:anfgc01@gmail.com?Subject=Hey you, lets talk!" target="_top">write me an
+                email</a></p>
+            <p class="msg">or following on something else ;)</p>
+            <div class="accounts">
+                <a><img style="	width: 25px;" src="images/networks/Behance.svg"> </a>
+                <a><img style="	width: 25px;" src="images/networks/facebook.svg"> </a>
+                <a><img style="	width: 25px;" src="images/networks/github.svg"> </a>
+                <a><img style="	width: 25px;" src="images/networks/instagram.svg"> </a>
+                <a><img style="	width: 25px;" src="images/networks/linkedin.svg"> </a>
+                <a><img style="	width: 25px;" src="images/networks/spotify.svg"> </a>
+            </div>
         </div>
+
     </div>
 </div>
-<!--</div>-->
+
+
 <!--le agrega un efecto de noise a la página-->
 <div class="noise"></div>
 
-<script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.15.0/TweenMax.min.js'></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.4/TweenLite.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.4/plugins/TextPlugin.min.js"></script>
 <script src="js/parallax.js"></script>
 <script src="js/main.js"></script>
-<!--<script src="js/menu.js"></script>-->
+<script src="js/menu.js"></script>
 <script src="js/projects.js"></script>
 <script src="js/contact.js"></script>
 <script src="js/home.js"></script>

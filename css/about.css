@@ -203,26 +203,22 @@
     justify-content: flex-end;
 }
 
-
 .ab-devtools {
     padding-top: 2em;
     justify-content: flex-end;
     display: flex;
+    width: 100%;
 }
 
 .icon {
     margin: .2em;
+    width: 1.5em;
 }
 
 .r_side {
     color: white;
     font-size: 2.5em;
     text-align: right;
-}
-
-.r_content {
-    position: absolute;
-    flex-direction: column;
 }
 
 .txt_r {
@@ -252,23 +248,46 @@
 @media (min-width: 600px) {
     .p_about {
         height: 40%;
+        margin-top: 0;
         /*background-color: #291F2F;*/
         flex-direction: column;
         align-items: flex-end;
         /*align-items: right;*/
         z-index: 5;
         width: 100%;
+
         left: 50%;
         top: 50%;
-        transform: translate(-50%, -35%);
+        transform: translate(-50%, -50%);
+
         position: absolute;
-        display: none;
+        /*display: none;*/
+    }
+    .ab-devtools {
+        padding-top: 2em;
+        justify-content: flex-end;
+        display: flex;
+        width: 100%;
+    }
+
+
+    .icon {
+        margin: .2em;
+        width: 4em;
+    }
+
+    .r_content {
+        display: flex;
+        position: absolute;
+        align-items: flex-end;
+        flex-direction: column;
+        padding: 3em;
     }
 
     .abb-c-name {
         font-size: 5em;
         /*text-align: right;*/
-        padding-right: 1em;
+        padding-right: .2em;
         padding-top: .2em;
         padding-left: .2em;
         padding-bottom: .2em;
@@ -282,6 +301,7 @@
         -webkit-box-shadow: none;
         -moz-box-shadow: none;
         box-shadow: none;
+        margin: 0em;
     }
 
     .abb-c-c1 {
@@ -293,6 +313,27 @@
         line-height: 1.2;
         font-weight: 400;
         /*align-self: right;*/
+    }
+
+    .l_content {
+        margin-left: 3em;
+    }
+
+    .r_side {
+        color: white;
+        font-size: 4em;
+        text-align: right;
+    }
+
+    .txt_r {
+        padding-top: 2em;
+        font-size: 1.5em;
+        width: 40%;
+        line-height: 1.5;
+
+        text-align: right;
+        padding-bottom: 1em;
+        font-weight: 400;
     }
 
     .ab_left {
@@ -312,15 +353,9 @@
     }
 
     .l_content {
-        width: 100%;
-        height: 50%;
-        /*background-color: #291F2F;*/
         display: flex;
         position: absolute;
-        left: 50%;
-        top: 50%;
-        padding: 4em;
-        transform: translate(-50%, -50%);
+        align-items: flex-start;
         flex-direction: column;
     }
 
@@ -330,8 +365,9 @@
 
     .txt_l {
         padding-top: 2em;
-        font-size: 1.2em;
-        width: 70%;
+        font-size: 1.5em;
+        width: 40%;
+        line-height: 1.5;
     }
 
     .telm {
@@ -354,15 +390,6 @@
         bottom: 0;
     }
 
-}
-
-.ab-container {
-    position: relative;
-    top: 30%;
-    /*left: 10%;*/
-    width: 40%;
-    height: auto;
-    /*background-color: darkmagenta;*/
 }
 
 .ab-splitline {

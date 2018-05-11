@@ -8,6 +8,7 @@ html, body {
     transition: all 0.4s ease;
     position: relative;
     background: linear-gradient(#161C2C, #291F2F);
+
 }
 
 * {
@@ -59,6 +60,7 @@ html, body {
     /*perspective: 1200px;*/
     transform-style: preserve-3d;
     overflow: hidden;
+    background-color: #291F2F;
 }
 
 #nav-buttons {

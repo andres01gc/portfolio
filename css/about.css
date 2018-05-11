@@ -203,6 +203,13 @@
     justify-content: flex-end;
 }
 
+
+.ab-devtools {
+    padding-top: 2em;
+    justify-content: flex-end;
+    display: flex;
+}
+
 .icon {
     margin: .2em;
 }

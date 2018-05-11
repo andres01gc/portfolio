@@ -20,7 +20,6 @@ addEventListenerList(buttonmenus, 'click', function (e) {
             outMenu(".p-contact");
             break;
     }
-
 });
 
 document.getElementById("menubt").addEventListener("click", function () {

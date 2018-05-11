@@ -59,7 +59,6 @@ function startHomePage() {
         }
     });
 
-
     initTl.fromTo(homebg, .5, {
             opacity: -1,
             scale: 1.5,
@@ -293,7 +292,7 @@ function outHome(el, nextp) {
         onComplete: function () {
             isAnimating = false;
             removeClass(document.querySelector('.is-current'), 'is-current');
-            inAbout(document.querySelector(nextp));
+            inAboutA(document.querySelector(nextp));
         }
     });
 

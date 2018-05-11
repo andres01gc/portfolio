@@ -89,16 +89,34 @@
     cursor: pointer;
 }
 
-@media only screen and (min-width: 320px) {
+@media (min-width: 600px) {
+
     .cont {
-        top: 15%;
+        background-color: #F91010;
+        /*top: 1%;*/
         z-index: 1;
         position: absolute;
-        margin: 0 auto;
-        right: 0%;
-        left: 0%;
-        width: 80%;
+        /*margin: 0 auto;*/
+        /*right: 0%;*/
+        /*left: 0%;*/
+        right: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
 
-        /*background-color: #F91010;*/
+        width: 40%;
+        height: 60%;
+        display: flex;
+        flex-direction: column;
+
     }
 }
+
+/*.cont {*/
+/*top: 15%;*/
+/*z-index: 1;*/
+/*position: absolute;*/
+/*margin: 0 auto;*/
+/*right: 0%;*/
+/*left: 0%;*/
+/*width: 80%;*/
+/*}*/

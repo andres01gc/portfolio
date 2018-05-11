@@ -246,7 +246,6 @@ function inAboutB() {
     var m_der = $("#mder");
     var nm = $(".d_side");
     var txt = $(".txt_l");
-    var tnext = $(".txt-nxt");
     var d_tools = $(".ab-dsgntools");
 
 
@@ -289,16 +288,6 @@ function inAboutB() {
         opacity: -3
     }, {
         x: 0,
-        opacity: 1,
-        ease: Power3.easeOut
-    }, 'a');
-
-
-    inth.fromTo(tnext, 5, {
-        y: -200,
-        opacity: -3
-    }, {
-        y: 0,
         opacity: 1,
         ease: Power3.easeOut
     }, 'a');
@@ -349,15 +338,23 @@ function outAboutB() {
     inth.fromTo(d_tools, 3, {
             opacity: 1,
             y: 0,
-            ease: Power3.easeOut,
+            ease: Power3.easeOut
 
         }, {
             opacity: -1,
-            y: 200,
-            clearProps: 'opacity, scale'
+            y: 200
         }, 'a'
     );
+    inth.fromTo($("#s2"), 2, {
+            opacity: 1,
+            y: 0,
+            ease: Power3.easeOut
 
+        }, {
+            opacity: -1,
+            y: 200
+        }, 'a'
+    );
     inth.fromTo(nm, 4, {
         y: 0,
         opacity: 1

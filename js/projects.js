@@ -3,9 +3,7 @@ var isUpdating = false;
 var nextProjectElement, currentProjectElement;
 var projects;
 
-
 function nextproj() {
-
     goOut(currentIndex);
 
     currentIndex++;
@@ -16,7 +14,7 @@ function nextproj() {
         nextIndex = 0;
         currentIndex = nextIndex;
     }
-   goIn(nextIndex);
+    goIn(nextIndex);
 }
 
 $(document).ready(function () {
@@ -164,7 +162,6 @@ function goIn(nextIn) {
 
     inTimeLine.play();
 }
-
 
 ///////////about line tools del who i am
 
